@@ -14,7 +14,7 @@ import zanextras.items.ZaneItems;
 public class RegistryUtil {
 	
 	public static void registerAll(FMLPreInitializationEvent event) {
-		registerItems(event, ZaneItems.butter);
+		registerItems(event, ZaneItems.butter, ZaneItems.angelHalo, ZaneItems.zograditeBlend, ZaneItems.lightIngot, ZaneItems.raditeIngot, ZaneItems.zogiteIngot, ZaneItems.zograditeIgnot);
 		registerBlocks(event, ZaneBlocks.butterOre);
 	}
 	

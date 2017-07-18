@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import zanextras.creativetabs.ModTabs;
 import zanextras.lib.ModInfo;
 
 public class ZaneHelper {
@@ -30,7 +31,7 @@ public class ZaneHelper {
 	}
 	
 	public static void setTab(Item item) {
-		item.setCreativeTab(CreativeTabs.MATERIALS);
+		item.setCreativeTab(ModTabs.zTabMat);
 	}
 	
 	public static void setName(Block block, String strName) {
