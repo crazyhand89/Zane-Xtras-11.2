@@ -21,17 +21,17 @@ public static CreativeTabs zTabsTools;
 		zTabMat = CommonRegisterHelper.createCreativeTabs("Zane Materials",
 				new ItemStack(ZaneItems.butter));
 		
-		zTabBlock = CommonRegisterHelper.createCreativeTabs("Zane Blocks",
-				new ItemStack(ZaneItems.butter));
+/*		zTabBlock = CommonRegisterHelper.createCreativeTabs("Zane Blocks",
+				new ItemStack(ZaneItems.butter));*/
 		
 /*		zTabOres = CommonRegisterHelper.createCreativeTabs("Zane Ores",
 				new ItemStack(Item.getItemFromBlock(ZaneBlocks.butterOre)));*/
 		
-		zTabsArmor = CommonRegisterHelper.createCreativeTabs("Zane Armor",
+/*		zTabsArmor = CommonRegisterHelper.createCreativeTabs("Zane Armor",
 				new ItemStack(ZaneItems.butter));
 		
 		zTabsTools = CommonRegisterHelper.createCreativeTabs("Zane Tools",
-				new ItemStack(ZaneItems.butter));
+				new ItemStack(ZaneItems.butter));*/
 	}
 
 }

@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=up": { "model": "zanextras:redglowtorch" },
+        "facing=east": { "model": "zanextras:redglowtorchwall" },
+        "facing=south": { "model": "zanextras:redglowtorchwall", "y": 90 },
+        "facing=west": { "model": "zanextras:redglowtorchwall", "y": 180 },
+        "facing=north": { "model": "zanextras:redglowtorchwall", "y": 270 }
+    }
+}
