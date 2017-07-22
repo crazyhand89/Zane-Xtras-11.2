@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import zanextras.config.ZaneConfig;
 import zanextras.creativetabs.ModTabs;
 import zanextras.proxies.IProxy;
 import zanextras.util.RegistryUtil;
@@ -21,8 +22,9 @@ public class ZaneXtrasMod {
 	 @EventHandler
 	 public void preInit(FMLPreInitializationEvent event){
 	  proxy.preInit(event);
-	  ModTabs.init();
+	  ZaneConfig.init(event);
 	  RegistryUtil.registerAll(event);
+	  ModTabs.init();
 	 }
 	 
 	 @EventHandler

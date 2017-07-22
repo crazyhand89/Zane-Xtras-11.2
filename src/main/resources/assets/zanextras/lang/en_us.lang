@@ -20,7 +20,7 @@ tile.zanextras_spinach.name=Spinach Crop
 tile.zanextras_greenbean.name=Green Bean Crop
 tile.zanextras_stariablock.name=Staria Block
 tile.zanextras_stariaore.name=Staria Ore
-tile.zanextras_redtorch.name=Red Glow Torch
+tile.zanextras_redglowtorch.name=Red Glow Torch
 tile.zanextras_zaniumblock.name=Zanium Block
 tile.zanextras_zaniumore.name=Zanium Ore
 tile.zanextras_cheesewheel.name=Cheese Wheel
@@ -240,7 +240,9 @@ entity.zanextras_uriel.name=Arch Angel Uriel
 
 zanextras_barrier=Purify Barrier
 
-itemGroup.Zane_Extras=Zane Extras
+itemGroup.Zane Materials=Zane Items
+itemGroup.Zane Blocks=Zane Blocks
+itemGroup.Zane Ores=Zane Ores
 
 achievement.butterore=What the heck is this?
 achievement.butterore.desc=Picked up your first butter ore

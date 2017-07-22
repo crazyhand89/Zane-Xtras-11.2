@@ -11,6 +11,8 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import zanextras.blocks.ZaneBlocks;
+import zanextras.config.ZaneConfig;
+import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
 
@@ -33,14 +35,30 @@ public class WorldGenManager implements IWorldGenerator {
 	}
 	
 	private void generateSurface(World world, Random random, int x, int z) {
-		// Damn Hard Butter Ore
-		addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 10,
-				16, 4 + random.nextInt(10), 20, 4,
-				35);
+		// Underground Ores
+				addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 16, 16,
+						4 + random.nextInt(4), ZaneConfig.oreButterSpawnRate, 4, 32);
+				addOreSpawn(ZaneBlocks.sodiumOre, world, random, x, z, 16, 16,
+						4 + random.nextInt(4), ZaneConfig.oreSodiumSpawnRate, 4, 32);
+				addOreSpawn(ZaneBlocks.stariaOre, world, random, x, z, 16, 16,
+						1 + random.nextInt(3), ZaneConfig.oreStariaSpawnRate, 2, 16);
+				addOreSpawn(ZaneBlocks.zogiteOre, world, random, x, z, 16, 16,
+						1 + random.nextInt(3), ZaneConfig.oreZogiteSpawnRate, 5, 20);
+				addOreSpawn(ZaneBlocks.raditeOre, world, random, x, z, 16, 16,
+						1 + random.nextInt(3), ZaneConfig.oreRaditeSpawnRate, 5, 20);
+				addOreSpawn(ZaneBlocks.foolStariaOre, world, random, x, z, 16, 16,
+						1 + random.nextInt(3), ZaneConfig.oreFoolStaria, 10, 35);
+				
+			//Sky Ores
+				addAirSpawnOre(ZaneBlocks.skyiumOre, world, random, x, z, 16, 16,
+						1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {
-		
+		//Zanium
+		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10,
+				16, 2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40,
+				128);
 	}
 	
 	private void generateEnd(World world, Random random, int x, int z) {
@@ -103,6 +121,26 @@ public class WorldGenManager implements IWorldGenerator {
 			int posY = minY + random.nextInt(diffBtwnMinMaxY);
 			int posZ = blockZPos + random.nextInt(maxZ);
 			new WorldGenEnderMinable(block.getDefaultState(), maxVeinSize)
+					.generate(world, random, new BlockPos(posX, posY, posZ));
+		}
+	}
+	
+	public void addAirSpawnOre(Block block, World world, Random random,
+			int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize,
+			int chancesToSpawn, int minY, int maxY) {
+		int maxPossY = minY + maxY - 1;
+		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
+		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
+		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+		
+		int diffBtwnMinMaxY = maxY - minY;
+		for (int x = 0; x < chancesToSpawn; x++) {
+			int posX = blockXPos + random.nextInt(maxX);
+			int posY = minY + random.nextInt(diffBtwnMinMaxY);
+			int posZ = blockZPos + random.nextInt(maxZ);
+			new WorldGenAirMinable(block.getDefaultState(), maxVeinSize)
 					.generate(world, random, new BlockPos(posX, posY, posZ));
 		}
 	}

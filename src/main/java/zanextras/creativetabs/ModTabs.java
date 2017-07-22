@@ -14,18 +14,18 @@ public class ModTabs {
 public static CreativeTabs zTabMat;
 public static CreativeTabs zTabBlock;
 public static CreativeTabs zTabOres;
-public static CreativeTabs zTabsArmor;
-public static CreativeTabs zTabsTools;
+public static CreativeTabs zTabCombat;
+public static CreativeTabs zTabTools;
 	
 	public static void init() {
 		zTabMat = CommonRegisterHelper.createCreativeTabs("Zane Materials",
 				new ItemStack(ZaneItems.butter));
 		
-/*		zTabBlock = CommonRegisterHelper.createCreativeTabs("Zane Blocks",
-				new ItemStack(ZaneItems.butter));*/
+		zTabBlock = CommonRegisterHelper.createCreativeTabs("Zane Blocks",
+				new ItemStack(Item.getItemFromBlock(ZaneBlocks.zograditeBlock)));
 		
-/*		zTabOres = CommonRegisterHelper.createCreativeTabs("Zane Ores",
-				new ItemStack(Item.getItemFromBlock(ZaneBlocks.butterOre)));*/
+		zTabOres = CommonRegisterHelper.createCreativeTabs("Zane Ores",
+				new ItemStack(Item.getItemFromBlock(ZaneBlocks.butterOre)));
 		
 /*		zTabsArmor = CommonRegisterHelper.createCreativeTabs("Zane Armor",
 				new ItemStack(ZaneItems.butter));
