@@ -2,6 +2,7 @@ package zanextras.items;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import zanextras.tools.butter.ItemToolButterAxe;
 
 public class ZaneItems {
 	
@@ -38,6 +39,7 @@ public class ZaneItems {
 	
 	//Tools
 	public static final Item chefKnife = new ZaneItemBase("chefknife");
+	public static final Item butterAxe = new ItemToolButterAxe();
 	
 	//Food
 	public static final Item butter = new ZaneItemBase(
