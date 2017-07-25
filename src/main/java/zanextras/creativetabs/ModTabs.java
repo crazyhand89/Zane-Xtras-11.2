@@ -5,7 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import zanextras.blocks.ZaneBlocks;
-import zanextras.handlers.CommonRegisterHelper;
+import zanextras.handlers.helpers.CommonRegisterHelper;
 import zanextras.items.ZaneItems;
 
 public class ModTabs {

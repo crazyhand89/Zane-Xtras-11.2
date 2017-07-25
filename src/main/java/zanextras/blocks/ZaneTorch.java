@@ -8,7 +8,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import zanextras.creativetabs.ModTabs;
-import zanextras.handlers.ZaneHelper;
+import zanextras.handlers.helpers.ZaneHelper;
 import zanextras.lib.ModInfo;
 
 public class ZaneTorch extends BlockTorch{

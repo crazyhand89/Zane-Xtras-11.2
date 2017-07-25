@@ -112,7 +112,12 @@ public class ZaneItems {
 			"zograditeblend", EnumRarity.EPIC);
 	public static final Item raditeDust = new ZaneItemRarity(
 			"raditedust", EnumRarity.UNCOMMON);
+	public static final Item zogiteDust = new ZaneItemRarity(
+			"zogitedust", EnumRarity.UNCOMMON);
 	public static final Item skyiumDust = new ZaneItemRarity("skyiumdust", EnumRarity.RARE);
+	public static final Item butterDust = new ZaneItemBase(
+			"butterdust");
+	public static final Item emeraldDust = new ZaneItemBase("emeralddust");
 	
 	//Bottles
 	public static final Item acidBottle = new ZaneItemBase(

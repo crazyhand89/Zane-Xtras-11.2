@@ -9,9 +9,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.config.ZaneConfig;
 import zanextras.creativetabs.ModTabs;
+import zanextras.handlers.helpers.ModDetector;
 import zanextras.proxies.IProxy;
+import zanextras.recipes.Recipes;
 import zanextras.util.RegistryUtil;
-import zanextras.worldgen.WorldGenManager;
+import zanextras.worldgen.ZaneWorldGenManager;
 
 @Mod(modid=ModInfo.MODID, name=ModInfo.NAME, version=ModInfo.VERSION)
 public class ZaneXtrasMod {
@@ -22,6 +24,7 @@ public class ZaneXtrasMod {
 	 @EventHandler
 	 public void preInit(FMLPreInitializationEvent event){
 	  proxy.preInit(event);
+	  ModDetector.detectMods();
 	  ZaneConfig.init(event);
 	  RegistryUtil.registerAll(event);
 	  ModTabs.init();
@@ -30,8 +33,9 @@ public class ZaneXtrasMod {
 	 @EventHandler
 	 public void init(FMLInitializationEvent event){
 	  proxy.init(event);
-	  GameRegistry.registerWorldGenerator(new WorldGenManager(),
+	  GameRegistry.registerWorldGenerator(new ZaneWorldGenManager(),
 			  40);
+	  Recipes.init();
 	 }
 	 
 	 @EventHandler

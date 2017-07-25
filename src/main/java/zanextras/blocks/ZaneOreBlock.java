@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import zanextras.creativetabs.ModTabs;
-import zanextras.handlers.ZaneHelper;
+import zanextras.handlers.helpers.ZaneHelper;
 import zanextras.lib.ModInfo;
 
 public class ZaneOreBlock extends Block{
