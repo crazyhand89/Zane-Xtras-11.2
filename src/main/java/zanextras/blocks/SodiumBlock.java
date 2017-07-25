@@ -44,7 +44,7 @@ public class SodiumBlock extends Block{
 	    @SideOnly(Side.CLIENT)
 	    public CreativeTabs getCreativeTabToDisplayOn()
 	    {
-	    	return ModTabs.zTabOres;
+	    	return ModTabs.zTabBlock;
 	    }
 	    
 	    @Override

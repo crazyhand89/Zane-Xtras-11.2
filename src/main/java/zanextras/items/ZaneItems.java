@@ -2,6 +2,12 @@ package zanextras.items;
 
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import zanextras.items.food.ZaneFrenchSalad;
+import zanextras.items.food.ZaneGhostPepper;
+import zanextras.items.food.ZaneItalianSalad;
+import zanextras.items.food.ZanePepper;
+import zanextras.items.food.ZaneRanchSalad;
+import zanextras.items.food.ZaneSalad;
 import zanextras.tools.butter.ItemToolButterAxe;
 
 public class ZaneItems {
@@ -38,39 +44,40 @@ public class ZaneItems {
 			EnumRarity.UNCOMMON);
 	
 	//Tools
-	public static final Item chefKnife = new ZaneItemBase("chefknife");
+	public static final Item chefKnife = new ZaneItemKnife("chefknife");
 	public static final Item butterAxe = new ItemToolButterAxe();
 	
-	//Food
-	public static final Item butter = new ZaneItemBase(
-			"butter");
+	//Edible Food
+	public static final Item butter = new ZaneItemFood("butter", 2, 0.5F, false);
+	public static final Item butterPotato = new ZaneItemFood("butterpotato", 8, 0.7F, false);
+	public static final Item cheese = new ZaneItemFood("cheese", 2, 0.5F, false);
+	public static final Item cookedFry = new ZaneItemFood("cookedfry", 2, 0.5F, false);
+	public static final Item cookedSweetPotatoFry = new ZaneItemFood("cookedsweetpotatofry", 2, 0.5F, false);
+	public static final Item crushedPeppercorn = new ZaneItemFood("crushedpeppercorn", 1, 0.3F, false);
+	public static final Item garlic = new ZaneItemFood("garlic", 2, 0.5F, false);
+	public static final Item greenBean = new ZaneItemFood("greenbean", 2, 0.5F, false);
+	public static final Item lettuce = new ZaneItemFood("lettuce", 2, 0.5F, false);
+	public static final Item onion = new ZaneItemFood("onion", 2, 0.5F, false);
+	public static final Item peppercorn = new ZaneItemFood("peppercorn", 2, 0.5F, false);
+	public static final Item rawFry = new ZaneItemFood("rawfry", 1, 0.1F, false);
+	public static final Item rawSweetPotatoFry = new ZaneItemFood("rawsweetpotatofry", 1, 0.1F, false);
+	public static final Item spinach = new ZaneItemFood("spinach", 2, 0.5F, false);
+	public static final Item tomato = new ZaneItemFood("tomato", 2, 0.5F, false);
+	public static final Item sweetPotato = new ZaneItemFood("sweetpotato", 2, 0.5F, false);
+	public static final Item salad = new ZaneSalad("salad", 20, 2.0F, false);
+	public static final Item ranchSalad = new ZaneRanchSalad("ranchsalad", 20, 2.0F, false);
+	public static final Item italianSalad = new ZaneItalianSalad("italiansalad", 20, 2.0F, false);
+	public static final Item frenchSalad = new ZaneFrenchSalad("frenchsalad", 20, 2.0F, false);
+	public static final Item greenPepper = new ZanePepper("greenpepper", 2, 0.5F, false);
+	public static final Item ghostPepper = new ZaneGhostPepper("ghostpepper", 2, 0.5F, false);
+	
+	//Non-Edible Food
 	public static final Item blackPepper = new ZaneItemBase(
 			"blackpepper");
 	public static final Item barrierApples = new ZaneItemBase(
 			"barrierapples");
-	public static final Item butterPotato = new ZaneItemBase("butterpotato");
-	public static final Item cheese = new ZaneItemBase("cheese");
-	public static final Item cookedFry = new ZaneItemBase("cookedfry");
-	public static final Item cookedSweetPotatoFry = new ZaneItemBase("cookedsweetpotatofry");
-	public static final Item crushedPeppercorn = new ZaneItemBase("crushedpeppercorn");
-	public static final Item frenchSalad = new ZaneItemBase("frenchsalad");
-	public static final Item garlic = new ZaneItemBase("garlic");
-	public static final Item ghostPepper = new ZaneItemBase("ghostpepper");
-	public static final Item greenBean = new ZaneItemBase("greenbean");
-	public static final Item greenPepper = new ZaneItemBase("greenpepper");
-	public static final Item italianSalad = new ZaneItemBase("italiansalad");
 	public static final Item ketchup = new ZaneItemBase("ketchup");
-	public static final Item lettuce = new ZaneItemBase("lettuce");
-	public static final Item onion = new ZaneItemBase("onion");
-	public static final Item peppercorn = new ZaneItemBase("peppercorn");
-	public static final Item ranchSalad = new ZaneItemBase("ranchsalad");
-	public static final Item rawFry = new ZaneItemBase("rawfry");
-	public static final Item rawSweetPotatoFry = new ZaneItemBase("rawsweetpotatofry");
-	public static final Item salad = new ZaneItemBase("salad");
 	public static final Item salt = new ZaneItemBase("salt");
-	public static final Item spinach = new ZaneItemBase("spinach");
-	public static final Item tomato = new ZaneItemBase("tomato");
-	public static final Item sweetPotato = new ZaneItemBase("sweetpotato");
 	
 	
 	//Promised-Land Items
@@ -120,18 +127,18 @@ public class ZaneItems {
 	public static final Item emeraldDust = new ZaneItemBase("emeralddust");
 	
 	//Bottles
-	public static final Item acidBottle = new ZaneItemBase(
+	public static final Item acidBottle = new ZaneItemBottle(
 			"acidbottle");
-	public static final Item chlorineBottle = new ZaneItemBase("chlorinebottle");
-	public static final Item frenchBottle = new ZaneItemBase(
+	public static final Item chlorineBottle = new ZaneItemBottle("chlorinebottle");
+	public static final Item frenchBottle = new ZaneItemBottle(
 			"frenchbottle");
-	public static final Item italianBottle = new ZaneItemBase(
+	public static final Item italianBottle = new ZaneItemBottle(
 			"italianbottle");
-	public static final Item mixtureBottle = new ZaneItemBase(
+	public static final Item mixtureBottle = new ZaneItemBottle(
 			"mixturebottle");
-	public static final Item ranchBottle = new ZaneItemBase(
+	public static final Item ranchBottle = new ZaneItemBottle(
 			"ranchbottle");
-	public static final Item vinegar = new ZaneItemBase("vinegar");
+	public static final Item vinegar = new ZaneItemBottle("vinegar");
 	
 	//Materials
 	public static final Item glowStick = new ZaneItemBase(

@@ -37,6 +37,6 @@ public class ZaneOreBlock extends Block{
     @SideOnly(Side.CLIENT)
     public CreativeTabs getCreativeTabToDisplayOn()
     {
-    	return ModTabs.zTabOres;
+    	return ModTabs.zTabBlock;
     }
 }

@@ -40,19 +40,19 @@ public static class EdibleFoodRecipes {
 							'S', ZaneItems.spinach, 'C', Items.CARROT, 'B',
 							Items.BOWL });
 			
-/*			// Raw Fries
+			// Raw Fries
 			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.rawFry, 8),
 					new Object[] {
-							new ItemStack(ZaneItems.knife, 1, WILDCARD_VALUE),
-							Items.potato });*/
+							new ItemStack(ZaneItems.chefKnife, 1, WILDCARD_VALUE),
+							Items.POTATO });
 			
-/*			// Raw Sweet Fries
+			// Raw Sweet Fries
 			GameRegistry
-					.addShapelessRecipe(new ItemStack(ZaneItems.rawSweet, 8),
+					.addShapelessRecipe(new ItemStack(ZaneItems.rawSweetPotatoFry, 8),
 							new Object[] {
-									new ItemStack(ZaneItems.knife, 1,
+									new ItemStack(ZaneItems.chefKnife, 1,
 											WILDCARD_VALUE),
-									ZaneItems.sweetPotato });*/
+									ZaneItems.sweetPotato });
 			
 /*			// Cheese Wheel
 			GameRegistry.addRecipe(new ItemStack(ZaneBlocks.cheeseBlock, 1),

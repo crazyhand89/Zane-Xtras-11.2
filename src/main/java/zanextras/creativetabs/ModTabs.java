@@ -23,15 +23,6 @@ public static CreativeTabs zTabTools;
 		
 		zTabBlock = CommonRegisterHelper.createCreativeTabs("Zane Blocks",
 				new ItemStack(Item.getItemFromBlock(ZaneBlocks.zograditeBlock)));
-		
-		zTabOres = CommonRegisterHelper.createCreativeTabs("Zane Ores",
-				new ItemStack(Item.getItemFromBlock(ZaneBlocks.butterOre)));
-		
-/*		zTabsArmor = CommonRegisterHelper.createCreativeTabs("Zane Armor",
-				new ItemStack(ZaneItems.butter));
-		
-		zTabsTools = CommonRegisterHelper.createCreativeTabs("Zane Tools",
-				new ItemStack(ZaneItems.butter));*/
 	}
 
 }

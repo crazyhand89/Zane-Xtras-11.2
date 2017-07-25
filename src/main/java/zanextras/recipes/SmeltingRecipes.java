@@ -21,19 +21,31 @@ public class SmeltingRecipes {
 			// Darm Hard Butter Ignot
 			addSmelting(ZaneBlocks.butterOre, new ItemStack(ZaneItems.dHbutterIngot, 1),
 					0.5F);
-			/*addSmelting(ZaneItems.butterDust,
-					new ItemStack(ZaneItems.butterItem, 1), 0.5F);*/
 			addSmelting(ZaneBlocks.zogiteOre,
 					new ItemStack(ZaneItems.zogiteIngot, 1), 0.5F);
 			addSmelting(ZaneBlocks.raditeOre,
 					new ItemStack(ZaneItems.raditeIngot, 1), 0.5F);
+			addSmelting(ZaneBlocks.skyiumOre,
+					new ItemStack(ZaneItems.skyium, 1), 0.5F);
+			
+			//Dust to ingot
+			addSmelting(ZaneItems.butterDust,
+					new ItemStack(ZaneItems.dHbutterIngot, 1), 0.5F);
+			addSmelting(ZaneItems.emeraldDust,
+					new ItemStack(Items.EMERALD, 1), 1.0F);
+			addSmelting(ZaneItems.raditeDust,
+					new ItemStack(ZaneItems.raditeIngot, 1), 1.0F);
+			addSmelting(ZaneItems.zogiteDust,
+					new ItemStack(ZaneItems.zogiteIngot, 1), 1.0F);
+			addSmelting(ZaneItems.skyiumDust,
+					new ItemStack(ZaneItems.skyium, 1), 1.0F);
 		}
 	}
 	
 	public static class FoodRecipes {
 		
 		public static void init() {
-			// Potato Fry CookedDust to ignot
+			// Potato Fry Cooked
 			addSmelting(ZaneItems.rawFry, new ItemStack(ZaneItems.cookedFry, 1),
 					0.1F);
 			

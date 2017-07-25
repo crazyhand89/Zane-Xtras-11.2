@@ -12,8 +12,8 @@ public class ZThermalExpansionRecipes {
 	
 	public static void init() {
 		/*MagmaCrucibleRecipes.init();
-		TransposerRecipes.init();
-		InductionRecipes.init();*/
+		TransposerRecipes.init();*/
+		InductionRecipes.init();
 		PulverizeOreRecipes.init();
 		LightOreRecipes.init();
 		PulverizeFoodRecipes.init();
@@ -21,22 +21,22 @@ public class ZThermalExpansionRecipes {
 	
 	public static class LightOreRecipes {
 		public static void init() {
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightDiamond, 1),
 					new ItemStack(Items.DIAMOND, 8));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightEmerald, 1),
 					new ItemStack(ZaneItems.emeraldDust, 8));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightGold, 1),
 					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustGold), 8, 1));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightIron, 1),
 					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustIron), 12, 0));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightLapis, 1),
 					new ItemStack(Items.DYE, 10, 4));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightRedstone, 1),
 					new ItemStack(Items.REDSTONE, 10));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
@@ -62,9 +62,19 @@ public class ZThermalExpansionRecipes {
 	
 	public static class PulverizeOreRecipes {
 		public static void init() {
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			
+			//Ore to gem
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.sodiumOre, 1),
 					new ItemStack(ZaneItems.sodium, 8));
+			ThermalExpansionHelper.addPulverizerRecipe(5000,
+					new ItemStack(ZaneBlocks.stariaOre, 1),
+					new ItemStack(ZaneItems.staria, 3));
+			ThermalExpansionHelper.addPulverizerRecipe(5000,
+					new ItemStack(ZaneBlocks.zaniumOre, 1),
+					new ItemStack(ZaneItems.zanium, 3));
+			
+			//Ore to Dust
 			ThermalExpansionHelper.addPulverizerRecipe(600,
 					new ItemStack(ZaneBlocks.skyiumOre, 1),
 					new ItemStack(ZaneItems.skyiumDust, 2));
@@ -74,7 +84,7 @@ public class ZThermalExpansionRecipes {
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.zogiteOre, 1),
 					new ItemStack(ZaneItems.zogiteDust, 2));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneItems.skyium, 1),
 					new ItemStack(ZaneItems.skyiumDust, 1));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
@@ -83,18 +93,12 @@ public class ZThermalExpansionRecipes {
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneItems.zogiteIngot, 1),
 					new ItemStack(ZaneItems.zogiteDust, 1));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneItems.dHbutterIngot, 1),
 					new ItemStack(ZaneItems.butterDust, 1));
-			ThermalExpansionHelper.addPulverizerRecipe(5000,
-					new ItemStack(ZaneBlocks.zaniumOre, 1),
-					new ItemStack(ZaneItems.zanium, 3));
-			ThermalExpansionHelper.addPulverizerRecipe(600,
+			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.butterOre, 1),
 					new ItemStack(ZaneItems.butterDust, 2));
-			ThermalExpansionHelper.addPulverizerRecipe(5000,
-					new ItemStack(ZaneBlocks.stariaOre, 1),
-					new ItemStack(ZaneItems.staria, 3));
 			
 		}
 	}
@@ -115,6 +119,8 @@ public class ZThermalExpansionRecipes {
 	
 	/*public static class MagmaCrucibleRecipes {
 		public static void init() {
+			
+			
 			// Molten Radite
 			ThermalExpansionHelper.addCrucibleRecipe(1500,
 					new ItemStack(ZaneItems.raditeIngot, 1),
@@ -138,8 +144,10 @@ public class ZThermalExpansionRecipes {
 		}
 	}*/
 	
-	/*public static class InductionRecipes {
+	public static class InductionRecipes {
 		public static void init() {
+			
+			/*
 			// Charged Staria
 			if (ModHelper.useZollernExtras) {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
@@ -191,7 +199,7 @@ public class ZThermalExpansionRecipes {
 						new ItemStack(ZaneItems.staria),
 						new ItemStack(ZaneItems.empoweredStaria));
 			}
-			
+			*/
 			ThermalExpansionHelper.addSmelterRecipe(10000,
 					new ItemStack(ZaneItems.chargedStaria),
 					new ItemStack(ZaneItems.zograditeBlend),
@@ -204,7 +212,7 @@ public class ZThermalExpansionRecipes {
 			ThermalExpansionHelper.addSmelterRecipe(1000,
 					new ItemStack(ZaneItems.glowStick),
 					new ItemStack(ZaneItems.raditeDust),
-					new ItemStack(ZaneItems.raditeInfusedStick));
+					new ItemStack(ZaneItems.raditeStick));
 		}
-	}*/
+	}
 }
