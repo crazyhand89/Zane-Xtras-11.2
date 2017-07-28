@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.blocks.ZaneBlocks;
+import zanextras.handlers.helpers.ModDetector;
 import zanextras.items.ZaneItems;
 
 public class ItemRecipes {
@@ -71,48 +72,49 @@ public class ItemRecipes {
 	public static class MiscRecipes {
 		
 		public static void init() {
-			/*// Chef's Knife
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.knife, 1),
+			// Chef's Knife
+			GameRegistry.addRecipe(new ItemStack(ZaneItems.chefKnife, 1),
 					new Object[] { "   ", " I ", "S  ", 'S', Items.STICK, 'I',
 							Items.IRON_INGOT });
 			
+			
 			// Charged Staria Alternative
-			if (!ModHelper.useZollernExtras && !ModHelper.useBigReactors) {
+			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.chargedStaria, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
-										Blocks.emerald_block, 'E',
+										Blocks.EMERALD_BLOCK, 'E',
 										ZaneItems.staria });
 			}
 			
 			// Charged Zanium Alternative
-			if (!ModHelper.useZollernExtras && !ModHelper.useBigReactors) {
+			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.chargedZanium, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
-										Blocks.emerald_block, 'E',
+										Blocks.EMERALD_BLOCK, 'E',
 										ZaneItems.zanium });
 			}
 			
 			// Empowered Staria Alternative
-			if (!ModHelper.useZollernExtras && !ModHelper.useBigReactors) {
+			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.empoweredStaria, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
-										Blocks.emerald_block, 'E',
+										Blocks.EMERALD_BLOCK, 'E',
 										ZaneItems.staria });
 			}
 			
 			// Empowered Zanium Alternative
-			if (!ModHelper.useZollernExtras && !ModHelper.useBigReactors) {
+			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.empoweredZanium, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
-										Blocks.emerald_block, 'E',
+										Blocks.EMERALD_BLOCK, 'E',
 										ZaneItems.zanium });
 			}
 			
-			// Zogradite Blend
+/*			// Zogradite Blend
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.zograditeBlend, 4),
 					new Object[] { "ZZ ", "RR ", "B  ", 'Z',
 							ZaneItems.zogiteDust, 'R', ZaneItems.raditeDust, 'B',

@@ -6,7 +6,7 @@ public class ZaneItemKnife extends ZaneItemBase{
 
 	public ZaneItemKnife(String itemName) {
 		super(itemName);
-		this.setMaxDamage(10);
+		this.setMaxDamage(500);
 		this.setMaxStackSize(1);
 	}
 

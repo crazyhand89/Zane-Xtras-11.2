@@ -54,7 +54,7 @@ public class SmeltingRecipes {
 					new ItemStack(ZaneItems.cookedSweetPotatoFry, 1), 0.1F);
 			
 			// Cheese
-			addSmelting(Items.MILK_BUCKET, new ItemStack(ZaneItems.cheese, 8),
+			addSmelting(Items.MILK_BUCKET, new ItemStack(ZaneItems.cheese, 9),
 					0.2F);
 			
 			// Vinegar

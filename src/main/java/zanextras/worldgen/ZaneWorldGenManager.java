@@ -42,7 +42,7 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 				addOreSpawn(ZaneBlocks.sodiumOre, world, random, x, z, 16, 16,
 						4 + random.nextInt(4), ZaneConfig.oreSodiumSpawnRate, 4, 32);
 				addOreSpawn(ZaneBlocks.stariaOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreStariaSpawnRate, 2, 16);
+						1 + random.nextInt(3), ZaneConfig.oreStariaSpawnRate, 5, 20);
 				addOreSpawn(ZaneBlocks.zogiteOre, world, random, x, z, 16, 16,
 						1 + random.nextInt(3), ZaneConfig.oreZogiteSpawnRate, 5, 20);
 				addOreSpawn(ZaneBlocks.raditeOre, world, random, x, z, 16, 16,

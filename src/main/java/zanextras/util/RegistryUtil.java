@@ -28,7 +28,7 @@ public class RegistryUtil {
 				ZaneItems.ranchBottle, ZaneItems.ranchSalad, ZaneItems.salt, ZaneItems.redGlowDust, ZaneItems.rawSweetPotatoFry, ZaneItems.salad,
 				ZaneItems.skyiumDust, ZaneItems.skyium, ZaneItems.spinach, ZaneItems.spinachSeeds, ZaneItems.sodium, ZaneItems.starCoal, ZaneItems.vinegar,
 				ZaneItems.tomato, ZaneItems.tomatoPaste, ZaneItems.tomatoSeeds, ZaneItems.sweetPotato, ZaneItems.butterAxe, ZaneItems.zogiteDust, ZaneItems.butterDust,
-				ZaneItems.emeraldDust);
+				ZaneItems.emeraldDust, ZaneItems.butterHoe, ZaneItems.butterPick, ZaneItems.butterSpade, ZaneItems.butterSword);
 		
 		registerBlocks(event, ZaneBlocks.butterOre, ZaneBlocks.butterBlock, ZaneBlocks.cheeseBlock, ZaneBlocks.lightEmerald, ZaneBlocks.lightCobble, 
 				ZaneBlocks.lightCopper, ZaneBlocks.lightDiamond, ZaneBlocks.lightDirt, ZaneBlocks.lightIron, ZaneBlocks.lightLapis, ZaneBlocks.lightRedstone,
@@ -36,7 +36,7 @@ public class RegistryUtil {
 				ZaneBlocks.lightTin, ZaneBlocks.lightStoneBrick, ZaneBlocks.redGlowBlock, ZaneBlocks.raditeBlock, ZaneBlocks.raditeOre, ZaneBlocks.lightPlanks,
 				ZaneBlocks.sodiumOre, ZaneBlocks.skeletonBlock, ZaneBlocks.skyiumBlock, ZaneBlocks.skyiumOre, ZaneBlocks.stariaBlock, ZaneBlocks.stariaOre,
 				ZaneBlocks.foolStariaBlock, ZaneBlocks.foolStariaOre, ZaneBlocks.zogiteBlock, ZaneBlocks.zogiteOre, ZaneBlocks.zograditeBlock, ZaneBlocks.urielBlock,
-				ZaneBlocks.zaniumBlock, ZaneBlocks.zaniumOre, ZaneBlocks.redTorch);
+				ZaneBlocks.zaniumBlock, ZaneBlocks.zaniumOre, ZaneBlocks.redTorch, ZaneBlocks.cheeseWheel);
 	}
 	
 	public static void registerBlocks(FMLPreInitializationEvent event,

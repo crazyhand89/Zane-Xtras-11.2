@@ -70,6 +70,7 @@ public class ZaneBlocks {
 	//Other Blocks
 	public static final Block lightDirt = new ZaneBlockBase(
 			"lightdirt", 1.5F);
+	public static final Block cheeseWheel = new ZaneCheeseWheel();
 	
 	//Material Blocks
 	public static final Block butterBlock = new ZaneBlockBase(

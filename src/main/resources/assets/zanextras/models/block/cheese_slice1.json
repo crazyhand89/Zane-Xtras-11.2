@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "zanextras:blocks/cheesewheel_side",
+        "bottom": "zanextras:blocks/cheesewheel_bottom",
+        "top": "zanextras:blocks/cheesewheel_top",
+        "side": "zanextras:blocks/cheesewheel_side",
+        "inside": "zanextras:blocks/cheesewheel_inner"
+    },
+    "elements": [
+        {   "from": [ 3, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

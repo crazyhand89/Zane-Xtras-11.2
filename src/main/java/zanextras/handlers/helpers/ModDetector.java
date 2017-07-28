@@ -1,6 +1,5 @@
 package zanextras.handlers.helpers;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.Loader;
 
 public class ModDetector {

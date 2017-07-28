@@ -3,10 +3,12 @@ package zanextras.recipes;
 import cofh.api.util.ThermalExpansionHelper;
 import cofh.lib.util.helpers.ItemHelper;
 import cofh.thermalfoundation.init.TFItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.items.ZaneItems;
+import zollernextras.items.ZollernItems;
 
 public class ZThermalExpansionRecipes {
 	
@@ -44,13 +46,13 @@ public class ZThermalExpansionRecipes {
 					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustNickel), 5, 69));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightCopper, 1),
-					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustCopper), 5, 64));
+					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustCopper), 8, 64));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightLead, 1),
-					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustLead), 5, 67));
+					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustLead), 8, 67));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightTin, 1),
-					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustTin), 5, 65));
+					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustTin), 8, 65));
 			ThermalExpansionHelper.addPulverizerRecipe(1000,
 					new ItemStack(ZaneBlocks.lightPlatnium, 1),
 					new ItemStack(ItemHelper.getItemFromStack(TFItems.itemMaterial.dustPlatinum), 5, 70));
@@ -107,7 +109,7 @@ public class ZThermalExpansionRecipes {
 		public static void init() {
 			ThermalExpansionHelper.addPulverizerRecipe(600,
 					new ItemStack(Items.MILK_BUCKET, 1),
-					new ItemStack(ZaneItems.butter, 4));
+					new ItemStack(ZaneItems.butter, 4), new ItemStack(Items.BUCKET, 1));
 			ThermalExpansionHelper.addPulverizerRecipe(600,
 					new ItemStack(ZaneItems.tomato, 1),
 					new ItemStack(ZaneItems.tomatoPaste, 4));
@@ -147,8 +149,8 @@ public class ZThermalExpansionRecipes {
 	public static class InductionRecipes {
 		public static void init() {
 			
-			/*
-			// Charged Staria
+			
+			/*// Charged Staria
 			if (ModHelper.useZollernExtras) {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
 						new ItemStack(ZollernBlocks.chargiumBlock),
@@ -156,7 +158,7 @@ public class ZThermalExpansionRecipes {
 						new ItemStack(ZaneItems.chargedStaria));
 			} else {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
-						new ItemStack(Blocks.emerald_block, 2),
+						new ItemStack(Blocks.EMERALD_BLOCK, 2),
 						new ItemStack(ZaneItems.staria),
 						new ItemStack(ZaneItems.chargedStaria));
 			}
@@ -169,7 +171,7 @@ public class ZThermalExpansionRecipes {
 						new ItemStack(ZaneItems.chargedZanium));
 			} else {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
-						new ItemStack(Blocks.emerald_block, 2),
+						new ItemStack(Blocks.EMERALD_BLOCK, 2),
 						new ItemStack(ZaneItems.zanium),
 						new ItemStack(ZaneItems.chargedZanium));
 			}
@@ -182,7 +184,7 @@ public class ZThermalExpansionRecipes {
 						new ItemStack(ZaneItems.empoweredZanium));
 			} else {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
-						new ItemStack(Blocks.emerald_block, 2),
+						new ItemStack(Blocks.EMERALD_BLOCK, 2),
 						new ItemStack(ZaneItems.zanium),
 						new ItemStack(ZaneItems.empoweredZanium));
 			}
@@ -195,11 +197,11 @@ public class ZThermalExpansionRecipes {
 						new ItemStack(ZaneItems.empoweredStaria));
 			} else {
 				ThermalExpansionHelper.addSmelterRecipe(5000,
-						new ItemStack(Blocks.emerald_block, 2),
+						new ItemStack(Blocks.EMERALD_BLOCK, 2),
 						new ItemStack(ZaneItems.staria),
 						new ItemStack(ZaneItems.empoweredStaria));
-			}
-			*/
+			}*/
+			
 			ThermalExpansionHelper.addSmelterRecipe(10000,
 					new ItemStack(ZaneItems.chargedStaria),
 					new ItemStack(ZaneItems.zograditeBlend),

@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "bites=0": { "model": "zanextras:cheese_uneaten" },
+        "bites=1": { "model": "zanextras:cheese_slice1" },
+        "bites=2": { "model": "zanextras:cheese_slice2" },
+        "bites=3": { "model": "zanextras:cheese_slice3" },
+        "bites=4": { "model": "zanextras:cheese_slice4" },
+        "bites=5": { "model": "zanextras:cheese_slice5" },
+        "bites=6": { "model": "zanextras:cheese_slice6" }
+    }
+}

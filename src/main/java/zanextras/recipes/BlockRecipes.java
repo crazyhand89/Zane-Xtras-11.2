@@ -24,6 +24,8 @@ public static class MaterialToBrickRecipes {
 			materialToBrick(ZaneBlocks.raditeBlock, ZaneItems.raditeIngot);
 			materialToBrick(ZaneBlocks.zogiteBlock, ZaneItems.zogiteIngot);
 			materialToBrick(ZaneBlocks.zograditeBlock, ZaneItems.zograditeIgnot);
+			addBricks(ZaneItems.redGlowDust, ZaneBlocks.redGlowBlock);
+			materialToBrick(ZaneBlocks.foolStariaBlock, ZaneItems.foolStaria);
 		}
 		
 	}

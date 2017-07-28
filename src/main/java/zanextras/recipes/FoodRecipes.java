@@ -54,9 +54,9 @@ public static class EdibleFoodRecipes {
 											WILDCARD_VALUE),
 									ZaneItems.sweetPotato });
 			
-/*			// Cheese Wheel
-			GameRegistry.addRecipe(new ItemStack(ZaneBlocks.cheeseBlock, 1),
-					new Object[] { "CCC", "CCC", "CCC", 'C', ZaneItems.cheese });*/
+			// Cheese Wheel
+			GameRegistry.addRecipe(new ItemStack(ZaneBlocks.cheeseWheel, 1),
+					new Object[] { "CCC", "CCC", "CCC", 'C', ZaneItems.cheese });
 			
 			// Butter
 			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.butter),
@@ -119,8 +119,10 @@ public static class EdibleFoodRecipes {
 			new Object[] { "   ", " A ", "ZRZ", 'A', Items.GOLDEN_APPLE,
 					'Z', ZaneItems.zogiteIngot, 'R', ZaneItems.raditeIngot});
 			
-/*			//Cheese Block
-			GameRegistry.addShapedRecipe(new ItemStack(ZaneBlocks.cheeseBlock, 1), new Object[] { "   ", "  C", "  C", 'C', ZaneBlocks.cheeseBlock});*/
+			//Cheese Block
+			GameRegistry.addShapedRecipe(new ItemStack(ZaneBlocks.cheeseBlock, 1), new Object[] { "   ", "  C", "  C", 'C', ZaneBlocks.cheeseWheel});
+			GameRegistry.addShapelessRecipe(new ItemStack(ZaneBlocks.cheeseWheel, 2),
+					new Object[] { ZaneBlocks.cheeseBlock });
 		}
 	}
 }

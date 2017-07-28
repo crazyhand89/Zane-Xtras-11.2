@@ -8,7 +8,12 @@ import zanextras.items.food.ZaneItalianSalad;
 import zanextras.items.food.ZanePepper;
 import zanextras.items.food.ZaneRanchSalad;
 import zanextras.items.food.ZaneSalad;
+import zanextras.tools.ZaneToolMaterials;
 import zanextras.tools.butter.ItemToolButterAxe;
+import zanextras.tools.butter.ItemToolButterHoe;
+import zanextras.tools.butter.ItemToolButterPickaxe;
+import zanextras.tools.butter.ItemToolButterSpade;
+import zanextras.tools.butter.ItemToolButterSword;
 
 public class ZaneItems {
 	
@@ -43,9 +48,15 @@ public class ZaneItems {
 	public static final Item lightArrow = new ZaneItemRarity("lightarrow", 
 			EnumRarity.UNCOMMON);
 	
-	//Tools
+	//Misc
 	public static final Item chefKnife = new ZaneItemKnife("chefknife");
+	
+	//Butter Tools
 	public static final Item butterAxe = new ItemToolButterAxe();
+	public static final Item butterHoe = new ItemToolButterHoe(ZaneToolMaterials.BUTTER);
+	public static final Item butterPick = new ItemToolButterPickaxe(ZaneToolMaterials.BUTTER);
+	public static final Item butterSpade = new ItemToolButterSpade(ZaneToolMaterials.BUTTER);
+	public static final Item butterSword = new ItemToolButterSword(ZaneToolMaterials.BUTTER);
 	
 	//Edible Food
 	public static final Item butter = new ZaneItemFood("butter", 2, 0.5F, false);
