@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":  { "model": "zanextras:lightlog" },
+        "axis=z":   { "model": "zanextras:lightlog", "x": 90 },
+        "axis=x":   { "model": "zanextras:lightlog", "x": 90, "y": 90 },
+        "axis=none": { "model": "zanextras:lightbark" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "zanextras:blocks/light_log_top",
+        "side": "zanextras:blocks/light_log_side"
+    }
+}

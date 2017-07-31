@@ -4,17 +4,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import zanextras.achievements.ZaneAchievements;
 import zanextras.creativetabs.ModTabs;
 import zanextras.handlers.helpers.ZaneHelper;
 import zanextras.lib.ModInfo;
 
-public class ZaneOreBlock extends Block{
-
+public class ZaneOreBlock extends Block {
+	
 	public ZaneOreBlock(String blockName, float hardResist, int level) {
 		super(Material.ROCK);
 		this.setRegistryName(ModInfo.MODID + "_" + blockName);
@@ -25,18 +27,30 @@ public class ZaneOreBlock extends Block{
 		this.setTab();
 	}
 	
-    public Block setTab()
-    {
+	public Block setTab() {
 		ZaneHelper.setTab(this);
-        return this;
-    }
-
-    /**
-     * Returns the CreativeTab to display the given block on.
-     */
-    @SideOnly(Side.CLIENT)
-    public CreativeTabs getCreativeTabToDisplayOn()
-    {
-    	return ModTabs.zTabBlock;
-    }
+		return this;
+	}
+	
+	/**
+	 * Returns the CreativeTab to display the given block on.
+	 */
+	@Override
+	@SideOnly(Side.CLIENT)
+	public CreativeTabs getCreativeTabToDisplayOn() {
+		return ModTabs.zTabBlock;
+	}
+	
+	@Override
+	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos,
+			IBlockState state, Entity entityIn) {
+		System.out.println(getUnlocalizedName());
+		if (entityIn instanceof EntityPlayer) {
+			
+			if (this.getUnlocalizedName() == "tile.zanextras_butterore") {
+				((EntityPlayer) entityIn)
+						.addStat(ZaneAchievements.butterOreAch);
+			}
+		}
+	}
 }

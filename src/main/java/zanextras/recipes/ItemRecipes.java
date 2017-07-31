@@ -7,39 +7,35 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.handlers.helpers.ModDetector;
 import zanextras.items.ZaneItems;
+import zollernextras.items.ZollernItems;
 
 public class ItemRecipes {
 	
 	public static void init() {
-/*		BottleRecipes.init();*/
+		/* BottleRecipes.init(); */
 		MiscRecipes.init();
 		StickRecipes.init();
 	}
 	
-	/*public static class BottleRecipes {
-		
-		public static void init() {
-			// Acid Bottle
-			GameRegistry
-					.addShapelessRecipe(new ItemStack(ZaneItems.acidBottle, 3),
-							new Object[] { ZaneItems.acidBucket,
-									Items.glass_bottle, Items.glass_bottle,
-									Items.glass_bottle });
-			
-			// Chlorine Bottle
-			GameRegistry
-					.addShapelessRecipe(
-							new ItemStack(ZaneItems.chlorineBottle, 3),
-							new Object[] { ZaneItems.chlorineBucket,
-									Items.glass_bottle, Items.glass_bottle,
-									Items.glass_bottle });
-			
-			// Mixed Bottle
-			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.mixedBottle),
-					new Object[] { ZaneItems.acidBottle, Items.water_bucket });
-			
-		}
-	}*/
+	/*
+	 * public static class BottleRecipes {
+	 * 
+	 * public static void init() { // Acid Bottle GameRegistry
+	 * .addShapelessRecipe(new ItemStack(ZaneItems.acidBottle, 3), new Object[]
+	 * { ZaneItems.acidBucket, Items.glass_bottle, Items.glass_bottle,
+	 * Items.glass_bottle });
+	 * 
+	 * // Chlorine Bottle GameRegistry .addShapelessRecipe( new
+	 * ItemStack(ZaneItems.chlorineBottle, 3), new Object[] {
+	 * ZaneItems.chlorineBucket, Items.glass_bottle, Items.glass_bottle,
+	 * Items.glass_bottle });
+	 * 
+	 * // Mixed Bottle GameRegistry.addShapelessRecipe(new
+	 * ItemStack(ZaneItems.mixedBottle), new Object[] { ZaneItems.acidBottle,
+	 * Items.water_bucket });
+	 * 
+	 * } }
+	 */
 	
 	public static class StickRecipes {
 		
@@ -56,16 +52,15 @@ public class ItemRecipes {
 							Items.NETHERBRICK });
 			
 			// Red Glow Stick
-			GameRegistry
-					.addRecipe(new ItemStack(ZaneBlocks.redTorch, 4),
-							new Object[] { "   ", "  R", "  S", 'R',
-									ZaneItems.redGlowDust, 'S',
-									Items.STICK });
+			GameRegistry.addRecipe(new ItemStack(ZaneBlocks.redTorch, 4),
+					new Object[] { "   ", "  R", "  S", 'R',
+							ZaneItems.redGlowDust, 'S', Items.STICK });
 			
-			/*// Light Stick
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.lightStick, 4),
-					new Object[] { "   ", "  P", "  P", 'P',
-							ZaneBlocks.lightPlank });*/
+			/*
+			 * // Light Stick GameRegistry.addRecipe(new
+			 * ItemStack(ZaneItems.lightStick, 4), new Object[] { "   ", "  P",
+			 * "  P", 'P', ZaneBlocks.lightPlank });
+			 */
 		}
 	}
 	
@@ -77,9 +72,9 @@ public class ItemRecipes {
 					new Object[] { "   ", " I ", "S  ", 'S', Items.STICK, 'I',
 							Items.IRON_INGOT });
 			
-			
 			// Charged Staria Alternative
-			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
+			if (!ModDetector.useZollernExtras
+					&& !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.chargedStaria, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
@@ -88,7 +83,8 @@ public class ItemRecipes {
 			}
 			
 			// Charged Zanium Alternative
-			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
+			if (!ModDetector.useZollernExtras
+					&& !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.chargedZanium, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
@@ -97,7 +93,8 @@ public class ItemRecipes {
 			}
 			
 			// Empowered Staria Alternative
-			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
+			if (!ModDetector.useZollernExtras
+					&& !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.empoweredStaria, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
@@ -106,7 +103,8 @@ public class ItemRecipes {
 			}
 			
 			// Empowered Zanium Alternative
-			if (!ModDetector.useZollernExtras && !ModDetector.useThermalExpansion) {
+			if (!ModDetector.useZollernExtras
+					&& !ModDetector.useThermalExpansion) {
 				GameRegistry
 						.addRecipe(new ItemStack(ZaneItems.empoweredZanium, 1),
 								new Object[] { "GGG", "GEG", "GGG", 'G',
@@ -114,11 +112,21 @@ public class ItemRecipes {
 										ZaneItems.zanium });
 			}
 			
-/*			// Zogradite Blend
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.zograditeBlend, 4),
-					new Object[] { "ZZ ", "RR ", "B  ", 'Z',
-							ZaneItems.zogiteDust, 'R', ZaneItems.raditeDust, 'B',
-							ZaneItems.raditeBucket });*/
+			// Test recipes
+			
+			if (ModDetector.useZollernExtras) {
+				GameRegistry
+						.addRecipe(new ItemStack(ZaneBlocks.redTorch, 8),
+								new Object[] { "   ", "  C", "  S", 'S',
+										Items.STICK, 'C',
+										ZollernItems.superChargedCoal });
+			}
+			/*
+			 * // Zogradite Blend GameRegistry.addRecipe(new
+			 * ItemStack(ZaneItems.zograditeBlend, 4), new Object[] { "ZZ ",
+			 * "RR ", "B  ", 'Z', ZaneItems.zogiteDust, 'R',
+			 * ZaneItems.raditeDust, 'B', ZaneItems.raditeBucket });
+			 */
 			
 			// Bone to Bonemeal Light
 			GameRegistry.addShapelessRecipe(

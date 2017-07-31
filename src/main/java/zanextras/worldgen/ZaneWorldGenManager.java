@@ -1,7 +1,6 @@
 package zanextras.worldgen;
 
 import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -16,8 +15,7 @@ import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
 
-public class ZaneWorldGenManager implements IWorldGenerator{
-
+public class ZaneWorldGenManager implements IWorldGenerator {
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
@@ -37,29 +35,41 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 	
 	private void generateSurface(World world, Random random, int x, int z) {
 		// Underground Ores
-				addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 16, 16,
-						4 + random.nextInt(4), ZaneConfig.oreButterSpawnRate, 4, 32);
-				addOreSpawn(ZaneBlocks.sodiumOre, world, random, x, z, 16, 16,
-						4 + random.nextInt(4), ZaneConfig.oreSodiumSpawnRate, 4, 32);
-				addOreSpawn(ZaneBlocks.stariaOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreStariaSpawnRate, 5, 20);
-				addOreSpawn(ZaneBlocks.zogiteOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreZogiteSpawnRate, 5, 20);
-				addOreSpawn(ZaneBlocks.raditeOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreRaditeSpawnRate, 5, 20);
-				addOreSpawn(ZaneBlocks.foolStariaOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreFoolStaria, 10, 35);
-				
-			//Sky Ores
-				addAirSpawnOre(ZaneBlocks.skyiumOre, world, random, x, z, 16, 16,
-						1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
+		addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 16, 16,
+				4 + random.nextInt(4), ZaneConfig.oreButterSpawnRate, 4, 32);
+		addOreSpawn(ZaneBlocks.sodiumOre, world, random, x, z, 16, 16,
+				4 + random.nextInt(4), ZaneConfig.oreSodiumSpawnRate, 4, 32);
+		addOreSpawn(ZaneBlocks.stariaOre, world, random, x, z, 16, 16,
+				1 + random.nextInt(3), ZaneConfig.oreStariaSpawnRate, 5, 20);
+		addOreSpawn(ZaneBlocks.zogiteOre, world, random, x, z, 16, 16,
+				1 + random.nextInt(3), ZaneConfig.oreZogiteSpawnRate, 5, 20);
+		addOreSpawn(ZaneBlocks.raditeOre, world, random, x, z, 16, 16,
+				1 + random.nextInt(3), ZaneConfig.oreRaditeSpawnRate, 5, 20);
+		addOreSpawn(ZaneBlocks.foolStariaOre, world, random, x, z, 16, 16,
+				1 + random.nextInt(3), ZaneConfig.oreFoolStaria, 10, 35);
+		
+		// Sky Ores
+		addAirSpawnOre(ZaneBlocks.skyiumOre, world, random, x, z, 16, 16,
+				1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
+		
+		/*
+		 * int y = world.getHeight();
+		 * 
+		 * if ( y <= 120 && random.nextInt(20) <= 4) {
+		 * 
+		 * WorldGenerator worldGenMet = new WorldGenMeteorite();
+		 * worldGenMet.generate(world, random, new BlockPos(x, y, z)); }
+		 */
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {
-		//Zanium
-		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10,
-				16, 2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40,
-				128);
+		// Zanium
+		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10, 16,
+				2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40, 128);
+		
+		// RedGlowStone
+		addNetherOreSpawn(ZaneBlocks.redGlowBlock, world, random, x, z, 10, 16,
+				10 + random.nextInt(11), 10, 40, 128);
 	}
 	
 	private void generateEnd(World world, Random random, int x, int z) {
@@ -71,18 +81,21 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 			int chancesToSpawn, int minY, int maxY) {
 		int maxPossY = minY + maxY - 1;
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
-		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+		assert maxX > 0
+				&& maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
 		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
-		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+		assert maxY < 256
+				&& maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+		assert maxZ > 0
+				&& maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
 		
 		int diffBtwnMinMaxY = maxY - minY;
 		for (int x = 0; x < chancesToSpawn; x++) {
 			int posX = blockXPos + random.nextInt(maxX);
 			int posY = minY + random.nextInt(diffBtwnMinMaxY);
 			int posZ = blockZPos + random.nextInt(maxZ);
-			new WorldGenMinable(block.getDefaultState(), maxVeinSize).generate(
-					world, random, new BlockPos(posX, posY, posZ));
+			new WorldGenMinable(block.getDefaultState(), maxVeinSize)
+					.generate(world, random, new BlockPos(posX, posY, posZ));
 		}
 	}
 	
@@ -91,10 +104,13 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 			int chancesToSpawn, int minY, int maxY) {
 		int maxPossY = minY + maxY - 1;
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
-		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+		assert maxX > 0
+				&& maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
 		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
-		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+		assert maxY < 256
+				&& maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+		assert maxZ > 0
+				&& maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
 		
 		int diffBtwnMinMaxY = maxY - minY;
 		for (int x = 0; x < chancesToSpawn; x++) {
@@ -111,10 +127,13 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 			int chancesToSpawn, int minY, int maxY) {
 		int maxPossY = minY + maxY - 1;
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
-		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+		assert maxX > 0
+				&& maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
 		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
-		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+		assert maxY < 256
+				&& maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+		assert maxZ > 0
+				&& maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
 		
 		int diffBtwnMinMaxY = maxY - minY;
 		for (int x = 0; x < chancesToSpawn; x++) {
@@ -131,10 +150,13 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 			int chancesToSpawn, int minY, int maxY) {
 		int maxPossY = minY + maxY - 1;
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
-		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+		assert maxX > 0
+				&& maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
 		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
-		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+		assert maxY < 256
+				&& maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+		assert maxZ > 0
+				&& maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
 		
 		int diffBtwnMinMaxY = maxY - minY;
 		for (int x = 0; x < chancesToSpawn; x++) {
@@ -166,8 +188,8 @@ public class ZaneWorldGenManager implements IWorldGenerator{
 	 * @param wg
 	 *            The structure.
 	 */
-	public static void spawnStructure(int minChance, int maxChance,
-			World world, Random random, int x, int y, int z, WorldGenerator wg) {
+	public static void spawnStructure(int minChance, int maxChance, World world,
+			Random random, int x, int y, int z, WorldGenerator wg) {
 		if (random.nextInt(maxChance) <= minChance) {
 			wg.generate(world, random, new BlockPos(x, y, z));
 		}

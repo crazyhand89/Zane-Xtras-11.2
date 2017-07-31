@@ -1,7 +1,6 @@
 package zanextras.config;
 
 import java.io.File;
-
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -53,6 +52,7 @@ public class ZaneConfig {
 	public static int oreLightPlatnium;
 	public static int oreLightSilver;
 	public static int oreLightLead;
+	public static int redGlow;
 	
 	public static Configuration config;
 	
@@ -86,7 +86,8 @@ public class ZaneConfig {
 						+ System.lineSeparator() + "Light Silver: 5"
 						+ System.lineSeparator() + "Light Lead: 7"
 						+ System.lineSeparator() + "Light Platnium: 3"
-						+ System.lineSeparator()
+						+ System.lineSeparator() + System.lineSeparator()
+						+ "Red Glow: 33" + System.lineSeparator()
 						+ "Staria in Light Dimension: 5");
 		config.addCustomCategoryComment(CATEGORY_CROPS,
 				"Change the spawn Rate of Crops here. Chance is determined out of 200"
@@ -163,20 +164,19 @@ public class ZaneConfig {
 		oreLightEmerald = config.get(CATEGORY_ORES, "lightEmerald", 4).getInt();
 		oreLightStaria = config.get(CATEGORY_ORES, "lightStaria", 5).getInt();
 		oreFoolStaria = config.get(CATEGORY_ORES, "oreFoolStaria", 8).getInt();
+		redGlow = config.get(CATEGORY_ORES, "redGlow", 33).getInt();
 		
-/*		if (ModHelper.useThermalFoundation) {
-			oreLightNickel = config.get(CATEGORY_ORES, "oreLightNickel", 4)
-					.getInt();
-			oreLightCopper = config.get(CATEGORY_ORES, "oreLightCopper", 10)
-					.getInt();
-			oreLightTin = config.get(CATEGORY_ORES, "oreLightTin", 10).getInt();
-			oreLightSilver = config.get(CATEGORY_ORES, "oreLightSilver", 5)
-					.getInt();
-			oreLightLead = config.get(CATEGORY_ORES, "oreLightLead", 7)
-					.getInt();
-			oreLightPlatnium = config.get(CATEGORY_ORES, "oreLightPlatnium", 3)
-					.getInt();
-		}*/
+		/*
+		 * if (ModHelper.useThermalFoundation) { oreLightNickel =
+		 * config.get(CATEGORY_ORES, "oreLightNickel", 4) .getInt();
+		 * oreLightCopper = config.get(CATEGORY_ORES, "oreLightCopper", 10)
+		 * .getInt(); oreLightTin = config.get(CATEGORY_ORES, "oreLightTin",
+		 * 10).getInt(); oreLightSilver = config.get(CATEGORY_ORES,
+		 * "oreLightSilver", 5) .getInt(); oreLightLead =
+		 * config.get(CATEGORY_ORES, "oreLightLead", 7) .getInt();
+		 * oreLightPlatnium = config.get(CATEGORY_ORES, "oreLightPlatnium", 3)
+		 * .getInt(); }
+		 */
 		
 		// Crop Spawn Rates
 		cropSpawnRate = config.get(CATEGORY_CROPS, "cropSpawnRate", 20)
