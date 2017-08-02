@@ -52,7 +52,9 @@ public class RegistryUtil {
 				ZaneItems.butterAxe, ZaneItems.zogiteDust, ZaneItems.butterDust,
 				ZaneItems.emeraldDust, ZaneItems.butterHoe,
 				ZaneItems.butterPick, ZaneItems.butterSpade,
-				ZaneItems.butterSword);
+				ZaneItems.butterSword, ZaneItems.butterBoots,
+				ZaneItems.butterChest, ZaneItems.butterLegs,
+				ZaneItems.butterHelm);
 		
 		registerBlocks(event, ZaneBlocks.butterOre, ZaneBlocks.butterBlock,
 				ZaneBlocks.cheeseBlock, ZaneBlocks.lightEmerald,

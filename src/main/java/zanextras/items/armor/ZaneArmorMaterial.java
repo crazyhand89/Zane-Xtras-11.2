@@ -1,10 +1,12 @@
 package zanextras.items.armor;
 
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraftforge.common.util.EnumHelper;
+
 public class ZaneArmorMaterial {
-	/*
-	 * public static ArmorMaterial BUTTER =
-	 * EnumHelper.addArmorMaterial("Butter", 15, new int[] { 2, 7, 6, 2 }, 11);
-	 */
+	
+	public static ArmorMaterial BUTTER = EnumHelper.addArmorMaterial("Butter",
+			"zanextras:butter", 15, new int[] { 2, 7, 6, 2 }, 11, null, 0);
 	
 	/*
 	 * public static ArmorMaterial EMERALD =
