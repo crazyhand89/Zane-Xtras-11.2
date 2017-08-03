@@ -56,7 +56,7 @@ public class ZaneBlocks {
 	// Wooden Blocks
 	public static final Block lightPlanks = new ZaneBlockBase("lightplanks",
 			1.5F);
-	public static final Block lightLog = new LightLog("lightlog");
+	public static final Block lightLog = new LightLog();
 	
 	// Stone Blocks
 	public static final Block lightStone = new ZaneBlockBase("lightstone",
