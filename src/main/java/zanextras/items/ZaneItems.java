@@ -3,7 +3,7 @@ package zanextras.items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
-import zanextras.items.armor.ItemZaneArmor;
+import zanextras.items.armor.ZaneArmor;
 import zanextras.items.armor.ZaneArmorMaterial;
 import zanextras.items.food.ZaneFrenchSalad;
 import zanextras.items.food.ZaneGhostPepper;
@@ -194,18 +194,115 @@ public class ZaneItems {
 			EnumRarity.EPIC);
 	public static final Item tomatoPaste = new ZaneItemBase("tomatopaste");
 	
-	// Armor
-	public static final Item butterBoots = new ItemZaneArmor(
+	// Butter Armor
+	public static final Item butterBoots = new ZaneArmor(
 			ZaneArmorMaterial.BUTTER, 1, EntityEquipmentSlot.FEET,
 			"butterboots");
-	public static final Item butterLegs = new ItemZaneArmor(
+	public static final Item butterLegs = new ZaneArmor(
 			ZaneArmorMaterial.BUTTER, 2, EntityEquipmentSlot.LEGS,
 			"butterleggings");
-	public static final Item butterChest = new ItemZaneArmor(
+	public static final Item butterChest = new ZaneArmor(
 			ZaneArmorMaterial.BUTTER, 1, EntityEquipmentSlot.CHEST,
 			"butterchestplate");
-	public static final Item butterHelm = new ItemZaneArmor(
+	public static final Item butterHelm = new ZaneArmor(
 			ZaneArmorMaterial.BUTTER, 1, EntityEquipmentSlot.HEAD,
 			"butterhelmet");
 	
+	// Emerald Armor
+	public static final Item emeraldBoots = new ZaneArmor(
+			ZaneArmorMaterial.EMERALD, 1, EntityEquipmentSlot.FEET,
+			"emeraldboots");
+	public static final Item emeraldLegs = new ZaneArmor(
+			ZaneArmorMaterial.EMERALD, 2, EntityEquipmentSlot.LEGS,
+			"emeraldleggings");
+	public static final Item emeraldChest = new ZaneArmor(
+			ZaneArmorMaterial.EMERALD, 1, EntityEquipmentSlot.CHEST,
+			"emeraldchestplate");
+	public static final Item emeraldHelm = new ZaneArmor(
+			ZaneArmorMaterial.EMERALD, 1, EntityEquipmentSlot.HEAD,
+			"emeraldhelmet");
+	
+	// Staria Armor
+	public static final Item stariaBoots = new ZaneArmor(
+			ZaneArmorMaterial.STARIA, 1, EntityEquipmentSlot.FEET,
+			"stariaboots");
+	public static final Item stariaLegs = new ZaneArmor(
+			ZaneArmorMaterial.STARIA, 2, EntityEquipmentSlot.LEGS,
+			"starialeggings");
+	public static final Item stariaChest = new ZaneArmor(
+			ZaneArmorMaterial.STARIA, 1, EntityEquipmentSlot.CHEST,
+			"stariachestplate");
+	public static final Item stariaHelm = new ZaneArmor(
+			ZaneArmorMaterial.STARIA, 1, EntityEquipmentSlot.HEAD,
+			"stariahelmet");
+	
+	// Zanium Armor
+	public static final Item zaniumBoots = new ZaneArmor(
+			ZaneArmorMaterial.ZANIUM, 1, EntityEquipmentSlot.FEET,
+			"zaniumboots");
+	public static final Item zaniumLegs = new ZaneArmor(
+			ZaneArmorMaterial.ZANIUM, 2, EntityEquipmentSlot.LEGS,
+			"zaniumleggings");
+	public static final Item zaniumChest = new ZaneArmor(
+			ZaneArmorMaterial.ZANIUM, 1, EntityEquipmentSlot.CHEST,
+			"zaniumchestplate");
+	public static final Item zaniumHelm = new ZaneArmor(
+			ZaneArmorMaterial.ZANIUM, 1, EntityEquipmentSlot.HEAD,
+			"zaniumhelmet");
+	
+	// Skyium Armor
+	public static final Item skyiumBoots = new ZaneArmor(
+			ZaneArmorMaterial.SKYIUM, 1, EntityEquipmentSlot.FEET,
+			"skyiumboots");
+	public static final Item skyiumLegs = new ZaneArmor(
+			ZaneArmorMaterial.SKYIUM, 2, EntityEquipmentSlot.LEGS,
+			"skyiumleggings");
+	public static final Item skyiumChest = new ZaneArmor(
+			ZaneArmorMaterial.SKYIUM, 1, EntityEquipmentSlot.CHEST,
+			"skyiumchestplate");
+	public static final Item skyiumHelm = new ZaneArmor(
+			ZaneArmorMaterial.SKYIUM, 1, EntityEquipmentSlot.HEAD,
+			"skyiumhelmet");
+	
+	// Fool Staria
+	public static final Item foolstariaBoots = new ZaneArmor(
+			ZaneArmorMaterial.FOOLSTARIA, 1, EntityEquipmentSlot.FEET,
+			"foolstariaboots");
+	public static final Item foolstariaLegs = new ZaneArmor(
+			ZaneArmorMaterial.FOOLSTARIA, 2, EntityEquipmentSlot.LEGS,
+			"foolstarialeggings");
+	public static final Item foolstariaChest = new ZaneArmor(
+			ZaneArmorMaterial.FOOLSTARIA, 1, EntityEquipmentSlot.CHEST,
+			"foolstariachestplate");
+	public static final Item foolstariaHelm = new ZaneArmor(
+			ZaneArmorMaterial.FOOLSTARIA, 1, EntityEquipmentSlot.HEAD,
+			"foolstariahelmet");
+	
+	// Zogite Armor
+	public static final Item zogiteBoots = new ZaneArmor(
+			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.FEET,
+			"zogiteboots");
+	public static final Item zogiteLegs = new ZaneArmor(
+			ZaneArmorMaterial.ZOGITE, 2, EntityEquipmentSlot.LEGS,
+			"zogiteleggings");
+	public static final Item zogiteChest = new ZaneArmor(
+			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.CHEST,
+			"zogitechestplate");
+	public static final Item zogiteHelm = new ZaneArmor(
+			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.HEAD,
+			"zogitehelmet");
+	
+	// Radite
+	public static final Item raditeBoots = new ZaneArmor(
+			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.FEET,
+			"raditeboots");
+	public static final Item raditeLegs = new ZaneArmor(
+			ZaneArmorMaterial.RADITE, 2, EntityEquipmentSlot.LEGS,
+			"raditeleggings");
+	public static final Item raditeChest = new ZaneArmor(
+			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.CHEST,
+			"raditechestplate");
+	public static final Item raditeHelm = new ZaneArmor(
+			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.HEAD,
+			"raditehelmet");
 }

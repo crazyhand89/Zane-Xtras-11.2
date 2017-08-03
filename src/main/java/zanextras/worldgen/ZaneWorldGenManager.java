@@ -33,6 +33,9 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 		}
 	}
 	
+	// x = width
+	// y = height
+	// z = depth
 	private void generateSurface(World world, Random random, int x, int z) {
 		// Underground Ores
 		addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 16, 16,
@@ -53,13 +56,14 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 				1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
 		
 		/*
-		 * int y = world.getHeight();
+		 * int y = world.getHeight(x, z);
 		 * 
-		 * if ( y <= 120 && random.nextInt(20) <= 4) {
+		 * if (y <= 120 && random.nextInt(20) <= 10) {
 		 * 
 		 * WorldGenerator worldGenMet = new WorldGenMeteorite();
 		 * worldGenMet.generate(world, random, new BlockPos(x, y, z)); }
 		 */
+		
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {

@@ -4,9 +4,9 @@ import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
+import zanextras.worldgen.ZaneWorldGenMaster;
 
-public class WorldGenMeteorite extends WorldGenerator {
+public class WorldGenMeteorite extends ZaneWorldGenMaster {
 	
 	public WorldGenMeteorite() {
 		
@@ -36,7 +36,7 @@ public class WorldGenMeteorite extends WorldGenerator {
 	 */
 	
 	@Override
-	public boolean generate(World world, Random rand, BlockPos position) {
+	public boolean generate(World world, Random rand, BlockPos pos) {
 		
 		/*
 		 * // check that each corner is one of the valid spawn blocks if
@@ -48,21 +48,28 @@ public class WorldGenMeteorite extends WorldGenerator {
 		 * false; }
 		 */
 		
-		System.out.println("spawned at: " + position.getX() + " "
-				+ position.getY() + " " + position.getZ());
-		
-		position.add(1, 5, 3);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
-		position.add(1, 5, 4);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
-		position.add(1, 5, 5);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
-		position.add(1, 5, 6);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
-		position.add(1, 5, 7);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
-		position.add(1, 5, 8);
-		world.setBlockState(position, Blocks.OBSIDIAN.getDefaultState());
+		System.out.println("spawned at: " + pos.getX() + " " + pos.getY() + " "
+				+ pos.getZ());
+		// Got it to work. Check out what I did:
+		//
+		// When you're adding to the position, it adds it every time. So adding
+		// x +5, y + 5 was adding 5 to both of them, in addition to where they
+		// previously were. Since the Z is the only thing that changes, that's
+		// the only one that needs an increase. What I wanna do next is create a
+		// wrapper method that encompasses all this complicated stuff so it's
+		// easier to do this on the fly. Maybe we could make a generic, abstract
+		// class that implements IWorldGenerator and extend from that. Inside of
+		// that would be
+		// all of our wrappers, methods, fields, etc. so that it's a little
+		// easier.
+		this.setBlock(world, pos.add(0, 0, 3), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(0, 0, 4), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(0, 0, 5), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(0, 0, 6), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(0, 0, 7), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(0, 0, 8), Blocks.OBSIDIAN);
+		//
 		return true;
 	}
+	
 }

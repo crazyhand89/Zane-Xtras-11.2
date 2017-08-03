@@ -54,7 +54,21 @@ public class RegistryUtil {
 				ZaneItems.butterPick, ZaneItems.butterSpade,
 				ZaneItems.butterSword, ZaneItems.butterBoots,
 				ZaneItems.butterChest, ZaneItems.butterLegs,
-				ZaneItems.butterHelm);
+				ZaneItems.butterHelm, ZaneItems.emeraldBoots,
+				ZaneItems.emeraldChest, ZaneItems.emeraldHelm,
+				ZaneItems.emeraldLegs, ZaneItems.stariaBoots,
+				ZaneItems.stariaChest, ZaneItems.stariaHelm,
+				ZaneItems.stariaLegs, ZaneItems.zaniumBoots,
+				ZaneItems.zaniumChest, ZaneItems.zaniumHelm,
+				ZaneItems.zaniumLegs, ZaneItems.skyiumBoots,
+				ZaneItems.skyiumChest, ZaneItems.skyiumHelm,
+				ZaneItems.skyiumLegs, ZaneItems.foolstariaBoots,
+				ZaneItems.foolstariaChest, ZaneItems.foolstariaHelm,
+				ZaneItems.foolstariaLegs, ZaneItems.raditeBoots,
+				ZaneItems.raditeChest, ZaneItems.raditeHelm,
+				ZaneItems.raditeLegs, ZaneItems.zogiteBoots,
+				ZaneItems.zogiteChest, ZaneItems.zogiteHelm,
+				ZaneItems.zogiteLegs);
 		
 		registerBlocks(event, ZaneBlocks.butterOre, ZaneBlocks.butterBlock,
 				ZaneBlocks.cheeseBlock, ZaneBlocks.lightEmerald,

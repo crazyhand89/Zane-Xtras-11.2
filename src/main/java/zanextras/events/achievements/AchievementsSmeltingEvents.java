@@ -7,7 +7,7 @@ import zanextras.items.ZaneItems;
 
 public class AchievementsSmeltingEvents {
 	@SubscribeEvent
-	public void notifyPickup(ItemSmeltedEvent e) {
+	public void onSmelting(ItemSmeltedEvent e) {
 		if (e.smelting.getItem().equals(ZaneItems.dHbutterIngot)) {
 			e.player.addStat(ZaneAchievements.butterIngotAch, 1);
 		}
