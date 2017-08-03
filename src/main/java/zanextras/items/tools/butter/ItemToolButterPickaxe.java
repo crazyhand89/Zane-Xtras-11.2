@@ -1,4 +1,4 @@
-package zanextras.tools.butter;
+package zanextras.items.tools.butter;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

@@ -11,12 +11,17 @@ import zanextras.items.food.ZaneItalianSalad;
 import zanextras.items.food.ZanePepper;
 import zanextras.items.food.ZaneRanchSalad;
 import zanextras.items.food.ZaneSalad;
-import zanextras.tools.ZaneToolMaterials;
-import zanextras.tools.butter.ItemToolButterAxe;
-import zanextras.tools.butter.ItemToolButterHoe;
-import zanextras.tools.butter.ItemToolButterPickaxe;
-import zanextras.tools.butter.ItemToolButterSpade;
-import zanextras.tools.butter.ItemToolButterSword;
+import zanextras.items.tools.ZaneToolMaterials;
+import zanextras.items.tools.butter.ItemToolButterAxe;
+import zanextras.items.tools.butter.ItemToolButterHoe;
+import zanextras.items.tools.butter.ItemToolButterPickaxe;
+import zanextras.items.tools.butter.ItemToolButterSpade;
+import zanextras.items.tools.butter.ItemToolButterSword;
+import zanextras.items.tools.staria.ItemToolStariaAxe;
+import zanextras.items.tools.staria.ItemToolStariaHoe;
+import zanextras.items.tools.staria.ItemToolStariaPickaxe;
+import zanextras.items.tools.staria.ItemToolStariaSpade;
+import zanextras.items.tools.staria.ItemToolStariaSword;
 
 public class ZaneItems {
 	
@@ -63,6 +68,17 @@ public class ZaneItems {
 	
 	// Misc
 	public static final Item chefKnife = new ZaneItemKnife("chefknife");
+	
+	// Staria Tools
+	public static final Item stariaSword = new ItemToolStariaSword(
+			ZaneToolMaterials.STARIA);
+	public static final Item stariaAxe = new ItemToolStariaAxe();
+	public static final Item stariaHoe = new ItemToolStariaHoe(
+			ZaneToolMaterials.STARIA);
+	public static final Item stariaPick = new ItemToolStariaPickaxe(
+			ZaneToolMaterials.STARIA);
+	public static final Item stariaSpade = new ItemToolStariaSpade(
+			ZaneToolMaterials.STARIA);
 	
 	// Butter Tools
 	public static final Item butterAxe = new ItemToolButterAxe();

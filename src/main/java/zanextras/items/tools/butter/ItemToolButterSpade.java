@@ -1,22 +1,21 @@
-package zanextras.tools.butter;
+package zanextras.items.tools.butter;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import zanextras.creativetabs.ModTabs;
 import zanextras.handlers.helpers.ZaneHelper;
 import zanextras.lib.ModInfo;
-import zanextras.tools.ZaneToolMaterials;
 
-public class ItemToolButterAxe extends ItemAxe {
-	
-	public ItemToolButterAxe() {
-		super(ZaneToolMaterials.BUTTER, ZaneToolMaterials.BUTTER.getDamageVsEntity(), -3.05F);
+public class ItemToolButterSpade extends ItemSpade{
+
+	public ItemToolButterSpade(ToolMaterial material) {
+		super(material);
 		this.setTab();
-		this.setRegistryName(ModInfo.MODID + "_butteraxe");
-		this.setUnlocalizedName(ModInfo.MODID + "_butteraxe");
+		this.setRegistryName(ModInfo.MODID + "_buttershovel");
+		this.setUnlocalizedName(ModInfo.MODID + "_buttershovel");
 	}
 	
 	public Item setTab() {
@@ -34,4 +33,5 @@ public class ItemToolButterAxe extends ItemAxe {
 		ZaneHelper.setName(this, strName);
 		return this;
 	}
+
 }

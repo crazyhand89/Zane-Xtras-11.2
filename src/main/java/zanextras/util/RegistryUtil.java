@@ -14,82 +14,117 @@ import zanextras.items.ZaneItems;
 public class RegistryUtil {
 	
 	public static void registerAll(FMLPreInitializationEvent event) {
-		registerItems(event, ZaneItems.butter, ZaneItems.angelHalo,
-				ZaneItems.zograditeBlend, ZaneItems.lightIngot,
+		
+		// Materials, Dust, Blends, Ingots, and other Materials
+		registerItems(event, ZaneItems.zograditeBlend, ZaneItems.lightIngot,
 				ZaneItems.raditeIngot, ZaneItems.zogiteIngot,
 				ZaneItems.zograditeIgnot, ZaneItems.staria, ZaneItems.zanium,
 				ZaneItems.chargedStaria, ZaneItems.chargedZanium,
 				ZaneItems.empoweredStaria, ZaneItems.empoweredZanium,
-				ZaneItems.acidBottle, ZaneItems.angelArrow, ZaneItems.angelKey,
-				ZaneItems.barrierApples, ZaneItems.blackPepper,
-				ZaneItems.bucketAcid, ZaneItems.bucketChlorine,
-				ZaneItems.bucketRadite, ZaneItems.butterPotato,
-				ZaneItems.chlorineBottle, ZaneItems.cheese, ZaneItems.chefKnife,
-				ZaneItems.dHbutterIngot, ZaneItems.cookedFry,
+				ZaneItems.dHbutterIngot, ZaneItems.foolStaria,
+				ZaneItems.lightNugget, ZaneItems.raditeDust,
+				ZaneItems.skyiumDust, ZaneItems.skyium, ZaneItems.sodium,
+				ZaneItems.zogiteDust, ZaneItems.butterDust,
+				ZaneItems.emeraldDust);
+		
+		// Food Items
+		registerItems(event, ZaneItems.butter, ZaneItems.acidBottle,
+				ZaneItems.blackPepper, ZaneItems.barrierApples,
+				ZaneItems.butterPotato, ZaneItems.chlorineBottle,
+				ZaneItems.cheese, ZaneItems.cookedFry,
 				ZaneItems.cookedSweetPotatoFry, ZaneItems.crushedPeppercorn,
-				ZaneItems.enderArrow, ZaneItems.foolStaria,
 				ZaneItems.ghostPepper, ZaneItems.garlic, ZaneItems.garlicSeeds,
 				ZaneItems.ghostPepperSeeds, ZaneItems.frenchBottle,
 				ZaneItems.frenchSalad, ZaneItems.italianBottle,
 				ZaneItems.italianSalad, ZaneItems.greenBean,
 				ZaneItems.greenBeanSeeds, ZaneItems.greenPepper,
-				ZaneItems.goldenArrow, ZaneItems.glowingFlesh,
-				ZaneItems.glowStick, ZaneItems.ketchup, ZaneItems.lettuce,
-				ZaneItems.lettuceSeeds, ZaneItems.lightBone,
-				ZaneItems.lightBoneMeal, ZaneItems.lightArrow,
-				ZaneItems.mixtureBottle, ZaneItems.lightStick,
-				ZaneItems.lightNugget, ZaneItems.lightEye,
-				ZaneItems.netherStick, ZaneItems.onion, ZaneItems.onionSeeds,
-				ZaneItems.peppercorn, ZaneItems.pepperSeeds,
-				ZaneItems.pureFeather, ZaneItems.rawFry, ZaneItems.raditeDust,
-				ZaneItems.raditeStick, ZaneItems.ranchBottle,
-				ZaneItems.ranchSalad, ZaneItems.salt, ZaneItems.redGlowDust,
-				ZaneItems.rawSweetPotatoFry, ZaneItems.salad,
-				ZaneItems.skyiumDust, ZaneItems.skyium, ZaneItems.spinach,
-				ZaneItems.spinachSeeds, ZaneItems.sodium, ZaneItems.starCoal,
-				ZaneItems.vinegar, ZaneItems.tomato, ZaneItems.tomatoPaste,
-				ZaneItems.tomatoSeeds, ZaneItems.sweetPotato,
-				ZaneItems.butterAxe, ZaneItems.zogiteDust, ZaneItems.butterDust,
-				ZaneItems.emeraldDust, ZaneItems.butterHoe,
-				ZaneItems.butterPick, ZaneItems.butterSpade,
-				ZaneItems.butterSword, ZaneItems.butterBoots,
-				ZaneItems.butterChest, ZaneItems.butterLegs,
-				ZaneItems.butterHelm, ZaneItems.emeraldBoots,
-				ZaneItems.emeraldChest, ZaneItems.emeraldHelm,
-				ZaneItems.emeraldLegs, ZaneItems.stariaBoots,
-				ZaneItems.stariaChest, ZaneItems.stariaHelm,
-				ZaneItems.stariaLegs, ZaneItems.zaniumBoots,
-				ZaneItems.zaniumChest, ZaneItems.zaniumHelm,
-				ZaneItems.zaniumLegs, ZaneItems.skyiumBoots,
-				ZaneItems.skyiumChest, ZaneItems.skyiumHelm,
-				ZaneItems.skyiumLegs, ZaneItems.foolstariaBoots,
-				ZaneItems.foolstariaChest, ZaneItems.foolstariaHelm,
-				ZaneItems.foolstariaLegs, ZaneItems.raditeBoots,
-				ZaneItems.raditeChest, ZaneItems.raditeHelm,
-				ZaneItems.raditeLegs, ZaneItems.zogiteBoots,
-				ZaneItems.zogiteChest, ZaneItems.zogiteHelm,
-				ZaneItems.zogiteLegs);
+				ZaneItems.ketchup, ZaneItems.lettuce, ZaneItems.lettuceSeeds,
+				ZaneItems.mixtureBottle, ZaneItems.onion, ZaneItems.onionSeeds,
+				ZaneItems.peppercorn, ZaneItems.pepperSeeds, ZaneItems.rawFry,
+				ZaneItems.ranchBottle, ZaneItems.ranchSalad, ZaneItems.salt,
+				ZaneItems.rawSweetPotatoFry, ZaneItems.salad, ZaneItems.spinach,
+				ZaneItems.spinachSeeds, ZaneItems.vinegar, ZaneItems.tomato,
+				ZaneItems.tomatoPaste, ZaneItems.tomatoSeeds,
+				ZaneItems.sweetPotato);
 		
-		registerBlocks(event, ZaneBlocks.butterOre, ZaneBlocks.butterBlock,
-				ZaneBlocks.cheeseBlock, ZaneBlocks.lightEmerald,
+		// Tools
+		registerItems(event, ZaneItems.chefKnife, ZaneItems.butterAxe,
+				ZaneItems.butterHoe, ZaneItems.butterPick,
+				ZaneItems.butterSpade, ZaneItems.butterSword,
+				ZaneItems.stariaSword, ZaneItems.stariaSpade,
+				ZaneItems.stariaPick, ZaneItems.stariaHoe, ZaneItems.stariaAxe);
+		
+		// Armor
+		registerItems(event, ZaneItems.butterBoots, ZaneItems.butterChest,
+				ZaneItems.butterLegs, ZaneItems.butterHelm,
+				ZaneItems.emeraldBoots, ZaneItems.emeraldChest,
+				ZaneItems.emeraldHelm, ZaneItems.emeraldLegs,
+				ZaneItems.stariaBoots, ZaneItems.stariaChest,
+				ZaneItems.stariaHelm, ZaneItems.stariaLegs,
+				ZaneItems.zaniumBoots, ZaneItems.zaniumChest,
+				ZaneItems.zaniumHelm, ZaneItems.zaniumLegs,
+				ZaneItems.skyiumBoots, ZaneItems.skyiumChest,
+				ZaneItems.skyiumHelm, ZaneItems.skyiumLegs,
+				ZaneItems.foolstariaBoots, ZaneItems.foolstariaChest,
+				ZaneItems.foolstariaHelm, ZaneItems.foolstariaLegs,
+				ZaneItems.raditeBoots, ZaneItems.raditeChest,
+				ZaneItems.raditeHelm, ZaneItems.raditeLegs,
+				ZaneItems.zogiteBoots, ZaneItems.zogiteChest,
+				ZaneItems.zogiteHelm, ZaneItems.zogiteLegs);
+		
+		// Promised-Land Materials
+		registerItems(event, ZaneItems.angelHalo, ZaneItems.angelArrow,
+				ZaneItems.angelKey, ZaneItems.glowingFlesh, ZaneItems.lightBone,
+				ZaneItems.lightBoneMeal, ZaneItems.lightStick,
+				ZaneItems.lightEye, ZaneItems.pureFeather);
+		
+		// Sticks
+		registerItems(event, ZaneItems.glowStick, ZaneItems.netherStick,
+				ZaneItems.raditeStick);
+		
+		// Buckets
+		registerItems(event, ZaneItems.bucketAcid, ZaneItems.bucketChlorine,
+				ZaneItems.bucketRadite);
+		
+		// Arrows
+		registerItems(event, ZaneItems.enderArrow, ZaneItems.goldenArrow,
+				ZaneItems.lightArrow);
+		
+		// Misc
+		registerItems(event, ZaneItems.redGlowDust, ZaneItems.starCoal);
+		
+		// Ores
+		registerBlocks(event, ZaneBlocks.butterOre, ZaneBlocks.lightEmerald,
 				ZaneBlocks.lightCobble, ZaneBlocks.lightCopper,
-				ZaneBlocks.lightDiamond, ZaneBlocks.lightDirt,
-				ZaneBlocks.lightIron, ZaneBlocks.lightLapis,
-				ZaneBlocks.lightRedstone, ZaneBlocks.lightStone,
-				ZaneBlocks.lightGold, ZaneBlocks.lightPlatnium,
-				ZaneBlocks.lightLead, ZaneBlocks.lightNickel,
-				ZaneBlocks.lightSilver, ZaneBlocks.lightTin,
-				ZaneBlocks.lightStoneBrick, ZaneBlocks.redGlowBlock,
-				ZaneBlocks.raditeBlock, ZaneBlocks.raditeOre,
-				ZaneBlocks.lightPlanks, ZaneBlocks.sodiumOre,
-				ZaneBlocks.skeletonBlock, ZaneBlocks.skyiumBlock,
-				ZaneBlocks.skyiumOre, ZaneBlocks.stariaBlock,
-				ZaneBlocks.stariaOre, ZaneBlocks.foolStariaBlock,
-				ZaneBlocks.foolStariaOre, ZaneBlocks.zogiteBlock,
-				ZaneBlocks.zogiteOre, ZaneBlocks.zograditeBlock,
-				ZaneBlocks.urielBlock, ZaneBlocks.zaniumBlock,
-				ZaneBlocks.zaniumOre, ZaneBlocks.redTorch,
-				ZaneBlocks.cheeseWheel, ZaneBlocks.lightLog);
+				ZaneBlocks.lightDiamond, ZaneBlocks.lightIron,
+				ZaneBlocks.lightLapis, ZaneBlocks.lightRedstone,
+				ZaneBlocks.lightStone, ZaneBlocks.lightGold,
+				ZaneBlocks.lightPlatnium, ZaneBlocks.lightLead,
+				ZaneBlocks.lightNickel, ZaneBlocks.lightSilver,
+				ZaneBlocks.lightTin, ZaneBlocks.raditeOre, ZaneBlocks.skyiumOre,
+				ZaneBlocks.stariaOre, ZaneBlocks.foolStariaOre,
+				ZaneBlocks.zogiteOre, ZaneBlocks.zaniumOre,
+				ZaneBlocks.sodiumOre);
+		
+		// Material Blocks
+		registerBlocks(event, ZaneBlocks.butterBlock, ZaneBlocks.redGlowBlock,
+				ZaneBlocks.raditeBlock, ZaneBlocks.zaniumBlock,
+				ZaneBlocks.skyiumBlock, ZaneBlocks.stariaBlock,
+				ZaneBlocks.foolStariaBlock, ZaneBlocks.zogiteBlock,
+				ZaneBlocks.zograditeBlock);
+		
+		// Food Blocks
+		registerBlocks(event, ZaneBlocks.cheeseBlock, ZaneBlocks.cheeseWheel);
+		
+		// Boss Blocks
+		registerBlocks(event, ZaneBlocks.skeletonBlock, ZaneBlocks.urielBlock);
+		
+		// Wooden Blocks
+		registerBlocks(event, ZaneBlocks.lightPlanks, ZaneBlocks.redTorch,
+				ZaneBlocks.lightLog);
+		
+		// Misc
+		registerBlocks(event, ZaneBlocks.lightDirt, ZaneBlocks.lightStoneBrick);
 	}
 	
 	public static void registerBlocks(FMLPreInitializationEvent event,

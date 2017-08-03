@@ -1,4 +1,4 @@
-package zanextras.tools;
+package zanextras.items.tools;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
