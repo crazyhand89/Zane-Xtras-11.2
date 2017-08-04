@@ -11,5 +11,13 @@ public class AchievementsSmeltingEvents {
 		if (e.smelting.getItem().equals(ZaneItems.dHbutterIngot)) {
 			e.player.addStat(ZaneAchievements.butterIngotAch, 1);
 		}
+		
+		if (e.smelting.getItem().equals(ZaneItems.zogiteIngot)) {
+			e.player.addStat(ZaneAchievements.zogiteIngotAch, 1);
+		}
+		
+		if (e.smelting.getItem().equals(ZaneItems.raditeIngot)) {
+			e.player.addStat(ZaneAchievements.raditeIngotAch, 1);
+		}
 	}
 }

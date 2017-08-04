@@ -52,7 +52,17 @@ public class RegistryUtil {
 				ZaneItems.butterHoe, ZaneItems.butterPick,
 				ZaneItems.butterSpade, ZaneItems.butterSword,
 				ZaneItems.stariaSword, ZaneItems.stariaSpade,
-				ZaneItems.stariaPick, ZaneItems.stariaHoe, ZaneItems.stariaAxe);
+				ZaneItems.stariaPick, ZaneItems.stariaHoe, ZaneItems.stariaAxe,
+				ZaneItems.emeraldAxe, ZaneItems.emeraldHoe,
+				ZaneItems.emeraldPick, ZaneItems.emeraldSpade,
+				ZaneItems.emeraldSword, ZaneItems.foolStariaAxe,
+				ZaneItems.foolStariaHoe, ZaneItems.foolStariaPick,
+				ZaneItems.foolStariaSpade, ZaneItems.foolStariaSword,
+				ZaneItems.zaniumAxe, ZaneItems.zaniumHoe, ZaneItems.zaniumPick,
+				ZaneItems.zaniumSpade, ZaneItems.zaniumSword,
+				ZaneItems.skyiumAxe, ZaneItems.skyiumHoe, ZaneItems.skyiumPick,
+				ZaneItems.skyiumSpade, ZaneItems.skyiumSword,
+				ZaneItems.angelSword);
 		
 		// Armor
 		registerItems(event, ZaneItems.butterBoots, ZaneItems.butterChest,

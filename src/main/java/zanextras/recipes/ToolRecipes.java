@@ -12,6 +12,17 @@ public class ToolRecipes {
 		makeToolSet(ZaneItems.dHbutterIngot, ZaneItems.butterPick,
 				ZaneItems.butterAxe, ZaneItems.butterHoe, ZaneItems.butterSword,
 				ZaneItems.butterSpade);
+		
+		GameRegistry
+				.addRecipe(new ItemStack(ZaneItems.stariaSword, 1),
+						new Object[] { " M ", " M ", " S ", 'M',
+								ZaneItems.empoweredStaria, 'S',
+								ZaneItems.glowStick });
+		
+		GameRegistry.addRecipe(new ItemStack(ZaneItems.zaniumSword, 1),
+				new Object[] { " M ", " M ", " S ", 'M',
+						ZaneItems.empoweredZanium, 'S',
+						ZaneItems.netherStick });
 	}
 	
 	public static void makeToolSet(Item mat, Item pick, Item axe, Item hoe,

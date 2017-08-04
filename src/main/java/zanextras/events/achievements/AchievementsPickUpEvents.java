@@ -50,5 +50,21 @@ public class AchievementsPickUpEvents {
 		if (item == ZaneItems.sodium) {
 			player.addStat(ZaneAchievements.sodiumOreAch, 1);
 		}
+		
+		if (item == Item.getItemFromBlock(ZaneBlocks.lightCopper)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightDiamond)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightEmerald)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightGold)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightIron)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightLapis)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightLead)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightNickel)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightPlatnium)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightRedstone)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightSilver)
+				|| item == Item.getItemFromBlock(ZaneBlocks.lightTin)) {
+			player.addStat(ZaneAchievements.lightOreAch, 1);
+		}
+		
 	}
 }

@@ -12,16 +12,37 @@ import zanextras.items.food.ZanePepper;
 import zanextras.items.food.ZaneRanchSalad;
 import zanextras.items.food.ZaneSalad;
 import zanextras.items.tools.ZaneToolMaterials;
+import zanextras.items.tools.angel.ItemToolAngelSword;
 import zanextras.items.tools.butter.ItemToolButterAxe;
 import zanextras.items.tools.butter.ItemToolButterHoe;
 import zanextras.items.tools.butter.ItemToolButterPickaxe;
 import zanextras.items.tools.butter.ItemToolButterSpade;
 import zanextras.items.tools.butter.ItemToolButterSword;
+import zanextras.items.tools.emerald.ItemToolEmeraldAxe;
+import zanextras.items.tools.emerald.ItemToolEmeraldHoe;
+import zanextras.items.tools.emerald.ItemToolEmeraldPickaxe;
+import zanextras.items.tools.emerald.ItemToolEmeraldSpade;
+import zanextras.items.tools.emerald.ItemToolEmeraldSword;
+import zanextras.items.tools.foolstaria.ItemToolFoolStariaAxe;
+import zanextras.items.tools.foolstaria.ItemToolFoolStariaHoe;
+import zanextras.items.tools.foolstaria.ItemToolFoolStariaPickaxe;
+import zanextras.items.tools.foolstaria.ItemToolFoolStariaSpade;
+import zanextras.items.tools.foolstaria.ItemToolFoolStariaSword;
+import zanextras.items.tools.skyium.ItemToolSkyiumAxe;
+import zanextras.items.tools.skyium.ItemToolSkyiumHoe;
+import zanextras.items.tools.skyium.ItemToolSkyiumPickaxe;
+import zanextras.items.tools.skyium.ItemToolSkyiumSpade;
+import zanextras.items.tools.skyium.ItemToolSkyiumSword;
 import zanextras.items.tools.staria.ItemToolStariaAxe;
 import zanextras.items.tools.staria.ItemToolStariaHoe;
 import zanextras.items.tools.staria.ItemToolStariaPickaxe;
 import zanextras.items.tools.staria.ItemToolStariaSpade;
 import zanextras.items.tools.staria.ItemToolStariaSword;
+import zanextras.items.tools.zanium.ItemToolZaniumAxe;
+import zanextras.items.tools.zanium.ItemToolZaniumHoe;
+import zanextras.items.tools.zanium.ItemToolZaniumPickaxe;
+import zanextras.items.tools.zanium.ItemToolZaniumSpade;
+import zanextras.items.tools.zanium.ItemToolZaniumSword;
 
 public class ZaneItems {
 	
@@ -90,6 +111,54 @@ public class ZaneItems {
 			ZaneToolMaterials.BUTTER);
 	public static final Item butterSword = new ItemToolButterSword(
 			ZaneToolMaterials.BUTTER);
+	
+	// Emerald Tools
+	public static final Item emeraldAxe = new ItemToolEmeraldAxe();
+	public static final Item emeraldHoe = new ItemToolEmeraldHoe(
+			ZaneToolMaterials.EMERALD);
+	public static final Item emeraldPick = new ItemToolEmeraldPickaxe(
+			ZaneToolMaterials.EMERALD);
+	public static final Item emeraldSpade = new ItemToolEmeraldSpade(
+			ZaneToolMaterials.EMERALD);
+	public static final Item emeraldSword = new ItemToolEmeraldSword(
+			ZaneToolMaterials.EMERALD);
+	
+	// Fool Staria Tools
+	public static final Item foolStariaSword = new ItemToolFoolStariaSword(
+			ZaneToolMaterials.FOOL_STARIA);
+	public static final Item foolStariaAxe = new ItemToolFoolStariaAxe();
+	public static final Item foolStariaHoe = new ItemToolFoolStariaHoe(
+			ZaneToolMaterials.FOOL_STARIA);
+	public static final Item foolStariaPick = new ItemToolFoolStariaPickaxe(
+			ZaneToolMaterials.FOOL_STARIA);
+	public static final Item foolStariaSpade = new ItemToolFoolStariaSpade(
+			ZaneToolMaterials.FOOL_STARIA);
+	
+	// Zanium Tools
+	public static final Item zaniumSword = new ItemToolZaniumSword(
+			ZaneToolMaterials.ZANIUM);
+	public static final Item zaniumAxe = new ItemToolZaniumAxe();
+	public static final Item zaniumHoe = new ItemToolZaniumHoe(
+			ZaneToolMaterials.ZANIUM);
+	public static final Item zaniumPick = new ItemToolZaniumPickaxe(
+			ZaneToolMaterials.ZANIUM);
+	public static final Item zaniumSpade = new ItemToolZaniumSpade(
+			ZaneToolMaterials.ZANIUM);
+	
+	// Angel Tools
+	public static final Item angelSword = new ItemToolAngelSword(
+			ZaneToolMaterials.ANGEL);
+	
+	// Skyium
+	public static final Item skyiumSword = new ItemToolSkyiumSword(
+			ZaneToolMaterials.SKYIUM);
+	public static final Item skyiumAxe = new ItemToolSkyiumAxe();
+	public static final Item skyiumHoe = new ItemToolSkyiumHoe(
+			ZaneToolMaterials.SKYIUM);
+	public static final Item skyiumPick = new ItemToolSkyiumPickaxe(
+			ZaneToolMaterials.SKYIUM);
+	public static final Item skyiumSpade = new ItemToolSkyiumSpade(
+			ZaneToolMaterials.SKYIUM);
 	
 	// Edible Food
 	public static final Item butter = new ZaneItemFood("butter", 2, 0.5F,
