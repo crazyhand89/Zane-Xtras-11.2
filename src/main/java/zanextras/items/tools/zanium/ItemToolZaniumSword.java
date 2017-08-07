@@ -49,8 +49,7 @@ public class ItemToolZaniumSword extends ItemSword {
 		super.onLeftClickEntity(par1ItemStack, par2EntityPlayer, entity);
 		if (entity instanceof EntityLivingBase) {
 			EntityLivingBase living = (EntityLivingBase) entity;
-			living.addPotionEffect(
-					new PotionEffect(MobEffects.WEAKNESS, 400, 3));
+			living.addPotionEffect(new PotionEffect(MobEffects.WITHER, 400, 3));
 		}
 		return false;
 	}
@@ -62,13 +61,9 @@ public class ItemToolZaniumSword extends ItemSword {
 		playerIn.addPotionEffect(
 				new PotionEffect(MobEffects.NIGHT_VISION, 1200, 0));
 		playerIn.addPotionEffect(
-				new PotionEffect(MobEffects.FIRE_RESISTANCE, 600, 0));
+				new PotionEffect(MobEffects.ABSORPTION, 2400, 1));
 		playerIn.addPotionEffect(
-				new PotionEffect(MobEffects.ABSORPTION, 2400, 4));
-		playerIn.addPotionEffect(
-				new PotionEffect(MobEffects.RESISTANCE, 600, 2));
-		playerIn.addPotionEffect(
-				new PotionEffect(MobEffects.REGENERATION, 600, 2));
+				new PotionEffect(MobEffects.STRENGTH, 2400, 0));
 		
 		ItemStack sword = playerIn.getHeldItem(handIn);
 		
