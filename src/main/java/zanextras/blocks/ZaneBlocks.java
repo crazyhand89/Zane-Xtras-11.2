@@ -8,6 +8,10 @@ public class ZaneBlocks {
 	
 	Random rand = new Random();
 	
+	// crops
+	public static final Block garlicCrop = new ZaneBlockCrops("garliccrop", 1,
+			4, ZaneItems.garlicSeeds, ZaneItems.garlic);
+	
 	// Light Ores
 	public static final Block lightDiamond = new ZaneParticleOreBlock(
 			"lightdiamondore", 1.5F, 2);

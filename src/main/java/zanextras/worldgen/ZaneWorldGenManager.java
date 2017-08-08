@@ -14,6 +14,7 @@ import zanextras.config.ZaneConfig;
 import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
+import zanextras.worldgen.structures.WorldGenMeteorite;
 
 public class ZaneWorldGenManager implements IWorldGenerator {
 	
@@ -55,15 +56,17 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 		addAirSpawnOre(ZaneBlocks.skyiumOre, world, random, x, z, 16, 16,
 				1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
 		
-		/*
-		 * int y = world.getHeight(x, z);
-		 * 
-		 * if (y <= 120 && random.nextInt(20) <= 10) {
-		 * 
-		 * WorldGenerator worldGenMet = new WorldGenMeteorite();
-		 * worldGenMet.generate(world, random, new BlockPos(x, y, z)); }
-		 */
+		int y = world.getHeight(x, z);
 		
+		if (y <= 120 && random.nextInt(100) <= 10) {
+			
+			WorldGenerator worldGenMet = new WorldGenMeteorite();
+			int randInt = random.nextInt(10);
+			Block minableBlock = (randInt <= 5) ? ZaneBlocks.stariaOre
+					: ZaneBlocks.zaniumOre;
+			((WorldGenMeteorite) worldGenMet).setMinableBlock(minableBlock);
+			worldGenMet.generate(world, random, new BlockPos(x, y, z));
+		}
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {

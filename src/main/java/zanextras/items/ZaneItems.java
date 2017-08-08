@@ -3,6 +3,7 @@ package zanextras.items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
+import zanextras.blocks.ZaneBlocks;
 import zanextras.items.armor.ZaneArmor;
 import zanextras.items.armor.ZaneArmorMaterial;
 import zanextras.items.armor.ZaneArmorRarity;
@@ -24,6 +25,7 @@ import zanextras.items.tools.ZaneSword;
 import zanextras.items.tools.ZaneToolMaterials;
 import zanextras.items.tools.staria.ItemToolStariaSword;
 import zanextras.items.tools.zanium.ItemToolZaniumSword;
+import zanextras.items.tools.zogradite.ItemToolZograditeScythe;
 
 public class ZaneItems {
 	
@@ -67,6 +69,8 @@ public class ZaneItems {
 			EnumRarity.UNCOMMON);
 	public static final Item lightArrow = new ZaneItemRarity("lightarrow",
 			EnumRarity.UNCOMMON);
+	public static final Item zograditeScythe = new ItemToolZograditeScythe(
+			ZaneToolMaterials.ZOGRADITE);
 	
 	// Misc
 	public static final Item chefKnife = new ZaneItemKnife("chefknife");
@@ -74,10 +78,14 @@ public class ZaneItems {
 	// Staria Tools
 	public static final Item stariaSword = new ItemToolStariaSword(
 			ZaneToolMaterials.STARIA);
-	public static final Item stariaAxe = new ZaneAxeRarity(ZaneToolMaterials.STARIA, ZaneToolMaterials.STARIA.getDamageVsEntity(), -2.7F, "stariaaxe", 3, 3, 3);
-	public static final Item stariaHoe = new ZaneHoeRarity(ZaneToolMaterials.STARIA,
-			"stariahoe", 3, 3);
-	public static final Item stariaPick = new ZanePickaxeRarity(ZaneToolMaterials.STARIA, "stariapickaxe", 3, 5, 3);
+	public static final Item stariaAxe = new ZaneAxeRarity(
+			ZaneToolMaterials.STARIA,
+			ZaneToolMaterials.STARIA.getDamageVsEntity(), -2.7F, "stariaaxe", 3,
+			3, 3);
+	public static final Item stariaHoe = new ZaneHoeRarity(
+			ZaneToolMaterials.STARIA, "stariahoe", 3, 3);
+	public static final Item stariaPick = new ZanePickaxeRarity(
+			ZaneToolMaterials.STARIA, "stariapickaxe", 3, 5, 3);
 	public static final Item stariaSpade = new ZaneSpadeRarity(
 			ZaneToolMaterials.STARIA, "stariashovel", 3, 3, 3);
 	
@@ -94,10 +102,13 @@ public class ZaneItems {
 			ZaneToolMaterials.BUTTER, "buttersword");
 	
 	// Emerald Tools
-	public static final Item emeraldAxe = new ZaneAxe(ZaneToolMaterials.EMERALD, ZaneToolMaterials.EMERALD.getDamageVsEntity(), -2.7F, "emeraldaxe", 2);
+	public static final Item emeraldAxe = new ZaneAxe(ZaneToolMaterials.EMERALD,
+			ZaneToolMaterials.EMERALD.getDamageVsEntity(), -2.7F, "emeraldaxe",
+			2);
 	public static final Item emeraldHoe = new ZaneHoe(ZaneToolMaterials.EMERALD,
 			"emeraldhoe", 1);
-	public static final Item emeraldPick = new ZanePickaxe(ZaneToolMaterials.EMERALD, "emeraldpickaxe", 1, 1);
+	public static final Item emeraldPick = new ZanePickaxe(
+			ZaneToolMaterials.EMERALD, "emeraldpickaxe", 1, 1);
 	public static final Item emeraldSpade = new ZaneSpade(
 			ZaneToolMaterials.EMERALD, "emeraldshovel", 1);
 	public static final Item emeraldSword = new ZaneSword(
@@ -120,24 +131,31 @@ public class ZaneItems {
 	// Zanium Tools
 	public static final Item zaniumSword = new ItemToolZaniumSword(
 			ZaneToolMaterials.ZANIUM);
-	public static final Item zaniumAxe = new ZaneAxeRarity(ZaneToolMaterials.ZANIUM, ZaneToolMaterials.ZANIUM.getDamageVsEntity(), -2.7F, "zaniumaxe", 3, 3, 1);
-	public static final Item zaniumHoe = new ZaneHoeRarity(ZaneToolMaterials.ZANIUM,
-			"zaniumhoe", 3, 1);
-	public static final Item zaniumPick = new ZanePickaxeRarity(ZaneToolMaterials.ZANIUM, "zaniumpickaxe", 3, 5, 1);
+	public static final Item zaniumAxe = new ZaneAxeRarity(
+			ZaneToolMaterials.ZANIUM,
+			ZaneToolMaterials.ZANIUM.getDamageVsEntity(), -2.7F, "zaniumaxe", 3,
+			3, 1);
+	public static final Item zaniumHoe = new ZaneHoeRarity(
+			ZaneToolMaterials.ZANIUM, "zaniumhoe", 3, 1);
+	public static final Item zaniumPick = new ZanePickaxeRarity(
+			ZaneToolMaterials.ZANIUM, "zaniumpickaxe", 3, 5, 1);
 	public static final Item zaniumSpade = new ZaneSpadeRarity(
 			ZaneToolMaterials.ZANIUM, "zaniumshovel", 3, 3, 1);
 	
 	// Angel Tools
-	public static final Item angelSword = new ZaneSword(
-			ZaneToolMaterials.ANGEL, "angelsword");
+	public static final Item angelSword = new ZaneSword(ZaneToolMaterials.ANGEL,
+			"angelsword");
 	
 	// Skyium
 	public static final Item skyiumSword = new ZaneSword(
 			ZaneToolMaterials.SKYIUM, "skyiumsword", 2, 2, 1);
-	public static final Item skyiumAxe = new ZaneAxe(ZaneToolMaterials.SKYIUM, ZaneToolMaterials.SKYIUM.getDamageVsEntity(), -2.7F, "skyiumaxe", 2, 1, 1);
+	public static final Item skyiumAxe = new ZaneAxe(ZaneToolMaterials.SKYIUM,
+			ZaneToolMaterials.SKYIUM.getDamageVsEntity(), -2.7F, "skyiumaxe", 2,
+			1, 1);
 	public static final Item skyiumHoe = new ZaneHoe(ZaneToolMaterials.SKYIUM,
 			"skyiumhoe", 1, 1);
-	public static final Item skyiumPick = new ZanePickaxe(ZaneToolMaterials.SKYIUM, "skyiumpickaxe", 2, 2, 1);
+	public static final Item skyiumPick = new ZanePickaxe(
+			ZaneToolMaterials.SKYIUM, "skyiumpickaxe", 2, 2, 1);
 	public static final Item skyiumSpade = new ZaneSpade(
 			ZaneToolMaterials.SKYIUM, "skyiumshovel", 2, 1);
 	
@@ -206,7 +224,8 @@ public class ZaneItems {
 			EnumRarity.RARE);
 	
 	// Seeds
-	public static final Item garlicSeeds = new ZaneItemBase("garlicseeds");
+	public static final Item garlicSeeds = new ZaneSeed(ZaneBlocks.garlicCrop,
+			"garlicseeds", ZaneItems.garlic, 0);
 	public static final Item ghostPepperSeeds = new ZaneItemBase(
 			"ghostpepperseeds");
 	public static final Item pepperSeeds = new ZaneItemBase("pepperseeds");

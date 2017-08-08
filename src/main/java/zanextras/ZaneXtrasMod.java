@@ -1,4 +1,4 @@
-package zanextras.lib;
+package zanextras;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -7,10 +7,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 import zanextras.achievements.ZaneAchievements;
 import zanextras.biomes.ZaneBiomeList;
 import zanextras.config.ZaneConfig;
@@ -20,6 +17,7 @@ import zanextras.events.achievements.AchievementsCraftedEvents;
 import zanextras.events.achievements.AchievementsPickUpEvents;
 import zanextras.events.achievements.AchievementsSmeltingEvents;
 import zanextras.handlers.helpers.ModDetector;
+import zanextras.lib.ModInfo;
 import zanextras.proxies.IProxy;
 import zanextras.recipes.Recipes;
 import zanextras.util.RegistryUtil;
@@ -37,6 +35,7 @@ public class ZaneXtrasMod {
 		proxy.preInit(event);
 		ModDetector.detectMods();
 		ZaneConfig.init(event);
+		GameRegistry.registerWorldGenerator(new ZaneWorldGenManager(), 40);
 		RegistryUtil.registerAll(event);
 		ZaneAchievements.init();
 		ModTabs.init();
@@ -44,12 +43,12 @@ public class ZaneXtrasMod {
 		MinecraftForge.EVENT_BUS.register(new AchievementsPickUpEvents());
 		MinecraftForge.EVENT_BUS.register(new AchievementsCraftedEvents());
 		MinecraftForge.EVENT_BUS.register(new AchievementsSmeltingEvents());
+		MinecraftForge.EVENT_BUS.register(new ZaneEvents());
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
-		GameRegistry.registerWorldGenerator(new ZaneWorldGenManager(), 40);
 		Recipes.init();
 	}
 	

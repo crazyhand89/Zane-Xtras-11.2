@@ -62,7 +62,7 @@ public class RegistryUtil {
 				ZaneItems.zaniumSpade, ZaneItems.zaniumSword,
 				ZaneItems.skyiumAxe, ZaneItems.skyiumHoe, ZaneItems.skyiumPick,
 				ZaneItems.skyiumSpade, ZaneItems.skyiumSword,
-				ZaneItems.angelSword);
+				ZaneItems.angelSword, ZaneItems.zograditeScythe);
 		
 		// Armor
 		registerItems(event, ZaneItems.butterBoots, ZaneItems.butterChest,
@@ -135,6 +135,9 @@ public class RegistryUtil {
 		
 		// Misc
 		registerBlocks(event, ZaneBlocks.lightDirt, ZaneBlocks.lightStoneBrick);
+		
+		// Crops
+		registerBlocks(event, ZaneBlocks.garlicCrop);
 	}
 	
 	public static void registerBlocks(FMLPreInitializationEvent event,
