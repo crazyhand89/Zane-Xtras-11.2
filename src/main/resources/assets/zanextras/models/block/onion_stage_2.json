@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "zanextras:blocks/onion_stage_2"
+    }
+}

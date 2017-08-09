@@ -14,7 +14,7 @@ public class ZaneSeedFood extends ItemSeedFood {
 	public final Block plant;
 	
 	public ZaneSeedFood(Block plant, String name, int returnMeta, int heal,
-			int sat) {
+			float sat) {
 		super(heal, sat, plant, Blocks.FARMLAND);
 		this.plant = plant;
 		this.setRegistryName(ModInfo.MODID + "_" + name);

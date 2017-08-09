@@ -11,6 +11,17 @@ public class ZaneBlocks {
 	// crops
 	public static final Block garlicCrop = new ZaneBlockCrops("garliccrop", 1,
 			4, ZaneItems.garlicSeeds, ZaneItems.garlic);
+	public static final Block sweetCrops = new ZaneBlockCrops("sweetpotatocrop",
+			1, 4, ZaneItems.sweetPotato);
+	public static final Block pepperCrops = new ZaneBlockCrops("peppercrop", 1,
+			4, ZaneItems.pepperSeeds, ZaneItems.greenPepper);
+	public static final Block onionCrops = new ZaneBlockCrops("onioncrop", 1, 4,
+			ZaneItems.onionSeeds, ZaneItems.onion);
+	public static final Block greenBeanCrops = new ZaneBlockCrops(
+			"greenbeancrop", 1, 4, ZaneItems.greenBeanSeeds,
+			ZaneItems.greenBean);
+	public static final Block ghostCrops = new ZaneBlockNetherCrops("ghostcrop",
+			1, 4, ZaneItems.ghostPepperSeeds, ZaneItems.ghostPepper);
 	
 	// Light Ores
 	public static final Block lightDiamond = new ZaneParticleOreBlock(

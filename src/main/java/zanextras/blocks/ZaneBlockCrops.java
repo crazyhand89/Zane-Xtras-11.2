@@ -15,8 +15,8 @@ public class ZaneBlockCrops extends BlockCrops {
 	private final int minDropAmount;
 	private final int addDropAmount;
 	public Item seedItem;
-	private Item returnItem;
-	private int returnMeta;
+	protected Item returnItem;
+	protected int returnMeta;
 	
 	public ZaneBlockCrops(String blockName, int minDropAmount,
 			int addDropAmount, Item seed, Item food) {
@@ -25,6 +25,18 @@ public class ZaneBlockCrops extends BlockCrops {
 		this.addDropAmount = addDropAmount;
 		this.seedItem = seed;
 		this.returnItem = food;
+		this.setRegistryName(ModInfo.MODID + "_" + blockName);
+		this.setUnlocalizedName(ModInfo.MODID + "_" + blockName);
+		
+	}
+	
+	public ZaneBlockCrops(String blockName, int minDropAmount,
+			int addDropAmount, Item seedFood) {
+		this.setCreativeTab((CreativeTabs) null);
+		this.minDropAmount = minDropAmount;
+		this.addDropAmount = addDropAmount;
+		this.seedItem = seedFood;
+		this.returnItem = seedFood;
 		this.setRegistryName(ModInfo.MODID + "_" + blockName);
 		this.setUnlocalizedName(ModInfo.MODID + "_" + blockName);
 		

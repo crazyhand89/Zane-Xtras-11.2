@@ -137,7 +137,9 @@ public class RegistryUtil {
 		registerBlocks(event, ZaneBlocks.lightDirt, ZaneBlocks.lightStoneBrick);
 		
 		// Crops
-		registerBlocks(event, ZaneBlocks.garlicCrop);
+		registerBlocks(event, ZaneBlocks.garlicCrop, ZaneBlocks.sweetCrops,
+				ZaneBlocks.pepperCrops, ZaneBlocks.onionCrops,
+				ZaneBlocks.greenBeanCrops, ZaneBlocks.ghostCrops);
 	}
 	
 	public static void registerBlocks(FMLPreInitializationEvent event,

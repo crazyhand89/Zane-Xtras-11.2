@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "zanextras:sweet_stage_0" },
+        "age=1": { "model": "zanextras:sweet_stage_0" },
+        "age=2": { "model": "zanextras:sweet_stage_1" },
+        "age=3": { "model": "zanextras:sweet_stage_1" },
+        "age=4": { "model": "zanextras:sweet_stage_2" },
+        "age=5": { "model": "zanextras:sweet_stage_2" },
+        "age=6": { "model": "zanextras:sweet_stage_2" },
+        "age=7": { "model": "zanextras:sweet_stage_3" }
+    }
+}

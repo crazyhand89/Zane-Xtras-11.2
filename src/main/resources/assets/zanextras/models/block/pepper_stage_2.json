@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "zanextras:blocks/pepper_stage_2"
+    }
+}

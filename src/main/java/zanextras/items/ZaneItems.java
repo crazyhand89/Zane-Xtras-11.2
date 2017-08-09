@@ -1,5 +1,6 @@
 package zanextras.items;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -189,8 +190,8 @@ public class ZaneItems {
 			false);
 	public static final Item tomato = new ZaneItemFood("tomato", 2, 0.5F,
 			false);
-	public static final Item sweetPotato = new ZaneItemFood("sweetpotato", 2,
-			0.5F, false);
+	public static final Item sweetPotato = new ZaneSeedFood(
+			ZaneBlocks.sweetCrops, "sweetpotato", 0, 2, 0.5F);
 	public static final Item salad = new ZaneSalad("salad", 20, 2.0F, false);
 	public static final Item ranchSalad = new ZaneRanchSalad("ranchsalad", 20,
 			2.0F, false);
@@ -226,13 +227,17 @@ public class ZaneItems {
 	// Seeds
 	public static final Item garlicSeeds = new ZaneSeed(ZaneBlocks.garlicCrop,
 			"garlicseeds", ZaneItems.garlic, 0);
-	public static final Item ghostPepperSeeds = new ZaneItemBase(
-			"ghostpepperseeds");
-	public static final Item pepperSeeds = new ZaneItemBase("pepperseeds");
-	public static final Item onionSeeds = new ZaneItemBase("onionseeds");
+	public static final Item ghostPepperSeeds = new ZaneNetherSeed(
+			ZaneBlocks.ghostCrops, Blocks.SOUL_SAND, "ghostpepperseeds",
+			ZaneItems.ghostPepper, 0);
+	public static final Item pepperSeeds = new ZaneSeed(ZaneBlocks.pepperCrops,
+			"pepperseeds", ZaneItems.greenPepper, 0);
+	public static final Item onionSeeds = new ZaneSeed(ZaneBlocks.onionCrops,
+			"onionseeds", ZaneItems.onion, 0);
 	public static final Item lettuceSeeds = new ZaneItemBase("lettuce_seeds");
-	public static final Item greenBeanSeeds = new ZaneItemBase(
-			"greenbeanseeds");
+	public static final Item greenBeanSeeds = new ZaneSeed(
+			ZaneBlocks.greenBeanCrops, "greenbeanseeds", ZaneItems.greenBean,
+			0);
 	public static final Item spinachSeeds = new ZaneItemBase("spinachseeds");
 	public static final Item tomatoSeeds = new ZaneItemBase("tomatoseeds");
 	
