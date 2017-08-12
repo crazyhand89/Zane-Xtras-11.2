@@ -147,7 +147,7 @@ public class ZaneItems {
 	public static final Item angelSword = new ZaneSword(ZaneToolMaterials.ANGEL,
 			"angelsword");
 	
-	// Skyium
+	// Skyium Tools
 	public static final Item skyiumSword = new ZaneSword(
 			ZaneToolMaterials.SKYIUM, "skyiumsword", 2, 2, 1);
 	public static final Item skyiumAxe = new ZaneAxe(ZaneToolMaterials.SKYIUM,
@@ -234,12 +234,15 @@ public class ZaneItems {
 			"pepperseeds", ZaneItems.greenPepper, 0);
 	public static final Item onionSeeds = new ZaneSeed(ZaneBlocks.onionCrops,
 			"onionseeds", ZaneItems.onion, 0);
-	public static final Item lettuceSeeds = new ZaneItemBase("lettuce_seeds");
+	public static final Item lettuceSeeds = new ZaneSeed(
+			ZaneBlocks.lettuceCrops, "lettuce_seeds", ZaneItems.lettuce, 0);
 	public static final Item greenBeanSeeds = new ZaneSeed(
 			ZaneBlocks.greenBeanCrops, "greenbeanseeds", ZaneItems.greenBean,
 			0);
-	public static final Item spinachSeeds = new ZaneItemBase("spinachseeds");
-	public static final Item tomatoSeeds = new ZaneItemBase("tomatoseeds");
+	public static final Item spinachSeeds = new ZaneSeed(
+			ZaneBlocks.spinachCrops, "spinachseeds", ZaneItems.spinach, 0);
+	public static final Item tomatoSeeds = new ZaneSeed(ZaneBlocks.tomatoCrops,
+			"tomatoseeds", ZaneItems.tomato, 0);
 	
 	// Buckets
 	public static final Item bucketAcid = new ZaneItemBase("bucket_acid");

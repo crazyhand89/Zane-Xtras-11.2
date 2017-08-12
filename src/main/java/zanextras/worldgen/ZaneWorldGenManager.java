@@ -15,6 +15,7 @@ import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
 import zanextras.worldgen.structures.WorldGenMeteorite;
+import zanextras.worldgen.structures.WorldGenRedGlowStone;
 
 public class ZaneWorldGenManager implements IWorldGenerator {
 	
@@ -29,7 +30,7 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 			this.generateNether(world, random, chunkX * 16, chunkZ * 16);
 			break;
 		case 1:
-			this.generateEnd(world, random, chunkX * 16, chunkX * 16);
+			this.generateEnd(world, random, chunkX * 16, chunkZ * 16);
 			break;
 		}
 	}
@@ -70,13 +71,34 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {
+		int Xcoord = x + random.nextInt(16);
+		int Zcoord = z + random.nextInt(16);
+		
 		// Zanium
 		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10, 16,
 				2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40, 128);
 		
-		// RedGlowStone
-		addNetherOreSpawn(ZaneBlocks.redGlowBlock, world, random, x, z, 10, 16,
-				10 + random.nextInt(11), 10, 40, 128);
+		// // RedGlowStone
+		// addNetherOreSpawn(ZaneBlocks.redGlowBlock, world, random, x, z, 10,
+		// 16,
+		// 10 + random.nextInt(11), 10, 40, 128);
+		
+		/*
+		 * int y = world.getHeight(x, z);
+		 * 
+		 * if (random.nextInt(500) <= 5) { if (y <= 36) { (new
+		 * WorldGenShinestone()).generate(world, random, new BlockPos(x, y, z));
+		 * } }
+		 */
+		
+		if (random.nextInt(10) <= 5) {
+			int y = world.getHeight(x, z);
+			
+			if (y >= 60) {
+				(new WorldGenRedGlowStone()).generate(world, random,
+						new BlockPos(x, y, z));
+			}
+		}
 	}
 	
 	private void generateEnd(World world, Random random, int x, int z) {

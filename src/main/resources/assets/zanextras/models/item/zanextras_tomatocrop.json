@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "zanextras:blocks/tomato_stage_5"
+    }
+}

@@ -2,6 +2,8 @@ package zanextras.blocks;
 
 import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import zanextras.items.ZaneItems;
 
 public class ZaneBlocks {
@@ -22,6 +24,12 @@ public class ZaneBlocks {
 			ZaneItems.greenBean);
 	public static final Block ghostCrops = new ZaneBlockNetherCrops("ghostcrop",
 			1, 4, ZaneItems.ghostPepperSeeds, ZaneItems.ghostPepper);
+	public static final Block lettuceCrops = new ZaneBlockCrops("lettucecrop",
+			1, 4, ZaneItems.lettuceSeeds, ZaneItems.lettuce);
+	public static final Block tomatoCrops = new ZaneBlockCrops("tomatocrop", 1,
+			4, ZaneItems.tomatoSeeds, ZaneItems.tomato);
+	public static final Block spinachCrops = new ZaneBlockCrops("spinachcrop",
+			1, 4, ZaneItems.spinachSeeds, ZaneItems.spinach);
 	
 	// Light Ores
 	public static final Block lightDiamond = new ZaneParticleOreBlock(
@@ -90,8 +98,8 @@ public class ZaneBlocks {
 			1.5F);
 	public static final Block cheeseBlock = new ZaneBlockBase("cheeseblock",
 			1.5F);
-	public static final Block redGlowBlock = new ZaneBlockBase("redglowstone",
-			1.5F);
+	public static final Block redGlowBlock = new RedGlowStone("redglowstone",
+			1.5F, Material.GLASS, 1.0F, SoundType.GLASS, ZaneItems.redGlowDust);
 	public static final Block raditeBlock = new ZaneBlockBase("raditeblock",
 			1.5F);
 	public static final Block skyiumBlock = new ZaneBlockBase("skyiumblock",

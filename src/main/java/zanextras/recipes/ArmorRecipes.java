@@ -2,6 +2,7 @@ package zanextras.recipes;
 
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.items.ZaneItems;
@@ -209,25 +210,57 @@ public class ArmorRecipes {
 			GameRegistry.addRecipe(raditeBoots, new Object[] { "   ", "S S",
 					"S S", 'S', ZaneItems.raditeIngot });
 			
-			// Hard Hat, Fool Staria
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaHelm, 1),
-					new Object[] { "RRR", "R R", "   ", 'R',
-							ZaneItems.foolStaria });
+			// // Hard Hat, Fool Staria
+			// GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaHelm,
+			// 1),
+			// new Object[] { "RRR", "R R", " ", 'R',
+			// ZaneItems.foolStaria });
+			//
+			// // Popping Chest, Fool Staria
+			// GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaChest,
+			// 1),
+			// new Object[] { "R R", "RRR", "RRR", 'R',
+			// ZaneItems.foolStaria });
+			//
+			// // Smooth Leggings, Fool Staria
+			// GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaLegs,
+			// 1),
+			// new Object[] { "RRR", "R R", "R R", 'R',
+			// ZaneItems.foolStaria });
+			//
+			// // Dem bootys, Fool Staria
+			// GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaBoots,
+			// 1),
+			// new Object[] { " ", "R R", "R R", 'R',
+			// ZaneItems.foolStaria });
 			
-			// Popping Chest, Fool Staria
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaChest, 1),
-					new Object[] { "R R", "RRR", "RRR", 'R',
-							ZaneItems.foolStaria });
-			
-			// Smooth Leggings, Fool Staria
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaLegs, 1),
-					new Object[] { "RRR", "R R", "R R", 'R',
-							ZaneItems.foolStaria });
-			
-			// Dem bootys, Fool Staria
-			GameRegistry.addRecipe(new ItemStack(ZaneItems.foolstariaBoots, 1),
-					new Object[] { "   ", "R R", "R R", 'R',
-							ZaneItems.foolStaria });
+			addArmorSet(ZaneItems.foolStaria, ZaneItems.foolstariaHelm,
+					ZaneItems.foolstariaChest, ZaneItems.foolstariaLegs,
+					ZaneItems.foolstariaBoots);
 		}
+	}
+	
+	public static void addArmorSet(Item mat, Item helm, Item chest, Item legs,
+			Item boots) {
+		
+		// Hard Hat
+		GameRegistry.addRecipe(new ItemStack(helm, 1),
+				new Object[] { "MMM", "M M", "   ", 'M', mat });
+		GameRegistry.addRecipe(new ItemStack(helm, 1),
+				new Object[] { "   ", "MMM", "M M", 'M', mat });
+		
+		// Popping Chest
+		GameRegistry.addRecipe(new ItemStack(chest, 1),
+				new Object[] { "M M", "MMM", "MMM", 'M', mat });
+		
+		// Smooth Leggings
+		GameRegistry.addRecipe(new ItemStack(legs, 1),
+				new Object[] { "MMM", "M M", "M M", 'M', mat });
+		
+		// Dem bootys
+		GameRegistry.addRecipe(new ItemStack(boots, 1),
+				new Object[] { "M M", "M M", "   ", 'M', mat });
+		GameRegistry.addRecipe(new ItemStack(boots, 1),
+				new Object[] { "   ", "M M", "M M", 'M', mat });
 	}
 }

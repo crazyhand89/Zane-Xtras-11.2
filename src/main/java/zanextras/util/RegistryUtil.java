@@ -38,14 +38,15 @@ public class RegistryUtil {
 				ZaneItems.frenchSalad, ZaneItems.italianBottle,
 				ZaneItems.italianSalad, ZaneItems.greenBean,
 				ZaneItems.greenBeanSeeds, ZaneItems.greenPepper,
-				ZaneItems.ketchup, ZaneItems.lettuce, ZaneItems.lettuceSeeds,
+				ZaneItems.ketchup,
+				ZaneItems.lettuce, /* ZaneItems.lettuceSeeds, */
 				ZaneItems.mixtureBottle, ZaneItems.onion, ZaneItems.onionSeeds,
 				ZaneItems.peppercorn, ZaneItems.pepperSeeds, ZaneItems.rawFry,
 				ZaneItems.ranchBottle, ZaneItems.ranchSalad, ZaneItems.salt,
 				ZaneItems.rawSweetPotatoFry, ZaneItems.salad, ZaneItems.spinach,
 				ZaneItems.spinachSeeds, ZaneItems.vinegar, ZaneItems.tomato,
 				ZaneItems.tomatoPaste, ZaneItems.tomatoSeeds,
-				ZaneItems.sweetPotato);
+				ZaneItems.sweetPotato, ZaneItems.lettuceSeeds);
 		
 		// Tools
 		registerItems(event, ZaneItems.chefKnife, ZaneItems.butterAxe,
@@ -139,7 +140,9 @@ public class RegistryUtil {
 		// Crops
 		registerBlocks(event, ZaneBlocks.garlicCrop, ZaneBlocks.sweetCrops,
 				ZaneBlocks.pepperCrops, ZaneBlocks.onionCrops,
-				ZaneBlocks.greenBeanCrops, ZaneBlocks.ghostCrops);
+				ZaneBlocks.greenBeanCrops, ZaneBlocks.ghostCrops,
+				ZaneBlocks.lettuceCrops, ZaneBlocks.tomatoCrops,
+				ZaneBlocks.spinachCrops);
 	}
 	
 	public static void registerBlocks(FMLPreInitializationEvent event,

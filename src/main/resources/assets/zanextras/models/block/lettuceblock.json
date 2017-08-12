@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "zanextras:blocks/lettuce_top",
+        "side": "zanextras:blocks/lettuce_side"
+    }
+}

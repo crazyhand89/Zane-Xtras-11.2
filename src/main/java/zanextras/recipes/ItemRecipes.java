@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.handlers.helpers.ModDetector;
 import zanextras.items.ZaneItems;
-import zollernextras.items.ZollernItems;
 
 public class ItemRecipes {
 	
@@ -56,11 +55,11 @@ public class ItemRecipes {
 					new Object[] { "   ", "  R", "  S", 'R',
 							ZaneItems.redGlowDust, 'S', Items.STICK });
 			
-			/*
-			 * // Light Stick GameRegistry.addRecipe(new
-			 * ItemStack(ZaneItems.lightStick, 4), new Object[] { "   ", "  P",
-			 * "  P", 'P', ZaneBlocks.lightPlank });
-			 */
+			// Light Stick
+			GameRegistry.addRecipe(new ItemStack(ZaneItems.lightStick, 4),
+					new Object[] { "   ", "  P", "  P", 'P',
+							ZaneBlocks.lightPlanks });
+			
 		}
 	}
 	
@@ -111,22 +110,11 @@ public class ItemRecipes {
 										Blocks.EMERALD_BLOCK, 'E',
 										ZaneItems.zanium });
 			}
-			
-			// Test recipes
-			
-			if (ModDetector.useZollernExtras) {
-				GameRegistry
-						.addRecipe(new ItemStack(ZaneBlocks.redTorch, 8),
-								new Object[] { "   ", "  C", "  S", 'S',
-										Items.STICK, 'C',
-										ZollernItems.superChargedCoal });
-			}
-			/*
-			 * // Zogradite Blend GameRegistry.addRecipe(new
-			 * ItemStack(ZaneItems.zograditeBlend, 4), new Object[] { "ZZ ",
-			 * "RR ", "B  ", 'Z', ZaneItems.zogiteDust, 'R',
-			 * ZaneItems.raditeDust, 'B', ZaneItems.raditeBucket });
-			 */
+			// Zogradite Blend
+			GameRegistry.addRecipe(new ItemStack(ZaneItems.zograditeBlend, 4),
+					new Object[] { "ZZ ", "RR ", "B  ", 'Z',
+							ZaneItems.zogiteDust, 'R', ZaneItems.raditeDust,
+							'B', ZaneItems.bucketRadite });
 			
 			// Bone to Bonemeal Light
 			GameRegistry.addShapelessRecipe(
