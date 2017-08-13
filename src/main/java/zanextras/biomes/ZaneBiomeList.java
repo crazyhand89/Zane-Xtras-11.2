@@ -13,7 +13,7 @@ public class ZaneBiomeList {
 			new Biome.BiomeProperties("Cheese Plains"));
 	
 	public static void init() {
-		addBiome(biomeCheese, 100, "cheese_plains", 5, BiomeType.WARM);
+		addBiome(biomeCheese, 4, "cheese_plains", 5, BiomeType.WARM);
 		
 	}
 	

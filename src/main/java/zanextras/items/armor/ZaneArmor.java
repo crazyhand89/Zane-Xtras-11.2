@@ -3,7 +3,6 @@ package zanextras.items.armor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Enchantments;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -37,6 +36,15 @@ public class ZaneArmor extends ItemArmor {
 		this.setTab();
 		this.amplifier1 = amp1;
 		this.amplifier2 = amp2;
+	}
+	
+	public ZaneArmor(ArmorMaterial materialIn, int renderIndexIn,
+			EntityEquipmentSlot equipmentSlotIn, String itemName, int amp1) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
+		this.setRegistryName(ModInfo.MODID + "_" + itemName);
+		this.setUnlocalizedName(ModInfo.MODID + "_" + itemName);
+		this.setTab();
+		this.amplifier1 = amp1;
 	}
 	
 	@Override
@@ -75,10 +83,12 @@ public class ZaneArmor extends ItemArmor {
 		}
 		
 		if (enchantArmor.isItemEqual(new ItemStack(ZaneItems.zaniumChest))) {
-			enchantArmor.addEnchantment(Enchantments.THORNS, amplifier2);
+			enchantArmor.addEnchantment(Enchantments.BLAST_PROTECTION,
+					amplifier2);
 		}
 		if (enchantArmor.isItemEqual(new ItemStack(ZaneItems.zaniumLegs))) {
-			enchantArmor.addEnchantment(Enchantments.THORNS, amplifier2);
+			enchantArmor.addEnchantment(Enchantments.PROJECTILE_PROTECTION,
+					amplifier2);
 		}
 		
 		// Skyium Armor
@@ -104,14 +114,34 @@ public class ZaneArmor extends ItemArmor {
 				|| enchantArmor.isItemEqual(new ItemStack(ZaneItems.stariaLegs))
 				|| enchantArmor.isItemEqual(new ItemStack(ZaneItems.stariaHelm))
 				|| enchantArmor
-						.isItemEqual(new ItemStack(ZaneItems.stariaChest))
-				|| enchantArmor
-						.isItemEqual(new ItemStack(ZaneItems.zaniumBoots))
+						.isItemEqual(new ItemStack(ZaneItems.stariaChest))) {
+			enchantArmor.addEnchantment(Enchantments.PROTECTION, amplifier1);
+		}
+		
+		if (enchantArmor.isItemEqual(new ItemStack(ZaneItems.zaniumBoots))
 				|| enchantArmor
 						.isItemEqual(new ItemStack(ZaneItems.zaniumChest))
 				|| enchantArmor.isItemEqual(new ItemStack(ZaneItems.zaniumHelm))
 				|| enchantArmor
 						.isItemEqual(new ItemStack(ZaneItems.zaniumLegs))) {
+			enchantArmor.addEnchantment(Enchantments.THORNS, amplifier1);
+		}
+		
+		if (enchantArmor.isItemEqual(new ItemStack(ZaneItems.zogiteBoots))
+				|| enchantArmor
+						.isItemEqual(new ItemStack(ZaneItems.zogiteChest))
+				|| enchantArmor.isItemEqual(new ItemStack(ZaneItems.zogiteHelm))
+				|| enchantArmor
+						.isItemEqual(new ItemStack(ZaneItems.zogiteLegs))) {
+			enchantArmor.addEnchantment(Enchantments.THORNS, amplifier1);
+		}
+		
+		if (enchantArmor.isItemEqual(new ItemStack(ZaneItems.raditeBoots))
+				|| enchantArmor
+						.isItemEqual(new ItemStack(ZaneItems.raditeChest))
+				|| enchantArmor.isItemEqual(new ItemStack(ZaneItems.raditeHelm))
+				|| enchantArmor
+						.isItemEqual(new ItemStack(ZaneItems.raditeLegs))) {
 			enchantArmor.addEnchantment(Enchantments.PROTECTION, amplifier1);
 		}
 		

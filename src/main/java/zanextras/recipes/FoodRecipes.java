@@ -8,18 +8,20 @@ import zanextras.items.ZaneItems;
 
 public class FoodRecipes {
 	
-	public static void init(){
+	public static void init() {
 		EdibleFoodRecipes.init();
 		InEdibleFoodRecipes.init();
 	}
 	
-public static class EdibleFoodRecipes {
+	public static class EdibleFoodRecipes {
 		
 		public static final int WILDCARD_VALUE = Short.MAX_VALUE;
 		
 		public static void init() {
 			// Special Salads
-			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.frenchSalad),
+			
+			GameRegistry.addShapelessRecipe(
+					new ItemStack(ZaneItems.frenchSalad),
 					new Object[] { ZaneItems.frenchBottle, ZaneItems.salad });
 			
 			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.ranchSalad),
@@ -41,14 +43,17 @@ public static class EdibleFoodRecipes {
 							Items.BOWL });
 			
 			// Raw Fries
-			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.rawFry, 8),
-					new Object[] {
-							new ItemStack(ZaneItems.chefKnife, 1, WILDCARD_VALUE),
-							Items.POTATO });
+			GameRegistry
+					.addShapelessRecipe(
+							new ItemStack(ZaneItems.rawFry,
+									8),
+							new Object[] { new ItemStack(ZaneItems.chefKnife, 1,
+									WILDCARD_VALUE), Items.POTATO });
 			
 			// Raw Sweet Fries
 			GameRegistry
-					.addShapelessRecipe(new ItemStack(ZaneItems.rawSweetPotatoFry, 8),
+					.addShapelessRecipe(
+							new ItemStack(ZaneItems.rawSweetPotatoFry, 8),
 							new Object[] {
 									new ItemStack(ZaneItems.chefKnife, 1,
 											WILDCARD_VALUE),
@@ -56,7 +61,8 @@ public static class EdibleFoodRecipes {
 			
 			// Cheese Wheel
 			GameRegistry.addRecipe(new ItemStack(ZaneBlocks.cheeseWheel, 1),
-					new Object[] { "CCC", "CCC", "CCC", 'C', ZaneItems.cheese });
+					new Object[] { "CCC", "CCC", "CCC", 'C',
+							ZaneItems.cheese });
 			
 			// Butter
 			GameRegistry.addShapelessRecipe(new ItemStack(ZaneItems.butter),
@@ -70,7 +76,8 @@ public static class EdibleFoodRecipes {
 			
 			// Tomato Paste
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.tomatoPaste, 2),
-					new Object[] { "   ", " T ", "   ", 'T', ZaneItems.tomato });
+					new Object[] { "   ", " T ", "   ", 'T',
+							ZaneItems.tomato });
 			
 			// Crushed Peppercorn
 			GameRegistry.addShapelessRecipe(
@@ -93,8 +100,8 @@ public static class EdibleFoodRecipes {
 			// Salt
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.salt, 1),
 					new Object[] { "CSG", "   ", "   ", 'C',
-							ZaneItems.chlorineBottle, 'S', ZaneItems.sodium, 'G',
-							Items.GLASS_BOTTLE });
+							ZaneItems.chlorineBottle, 'S', ZaneItems.sodium,
+							'G', Items.GLASS_BOTTLE });
 			
 			// French
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.frenchBottle, 1),
@@ -114,14 +121,18 @@ public static class EdibleFoodRecipes {
 							'S', Items.SUGAR, 'G', Items.GLASS_BOTTLE, 'B',
 							ZaneItems.blackPepper, 's', ZaneItems.salt });
 			
-			//Barrier Apple
+			// Barrier Apple
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.barrierApples, 4),
-			new Object[] { "   ", " A ", "ZRZ", 'A', Items.GOLDEN_APPLE,
-					'Z', ZaneItems.zogiteIngot, 'R', ZaneItems.raditeIngot});
+					new Object[] { "   ", " A ", "ZRZ", 'A', Items.GOLDEN_APPLE,
+							'Z', ZaneItems.zogiteIngot, 'R',
+							ZaneItems.raditeIngot });
 			
-			//Cheese Block
-			GameRegistry.addShapedRecipe(new ItemStack(ZaneBlocks.cheeseBlock, 1), new Object[] { "   ", "  C", "  C", 'C', ZaneBlocks.cheeseWheel});
-			GameRegistry.addShapelessRecipe(new ItemStack(ZaneBlocks.cheeseWheel, 2),
+			// Cheese Block
+			GameRegistry.addShapedRecipe(
+					new ItemStack(ZaneBlocks.cheeseBlock, 1), new Object[] {
+							"   ", "  C", "  C", 'C', ZaneBlocks.cheeseWheel });
+			GameRegistry.addShapelessRecipe(
+					new ItemStack(ZaneBlocks.cheeseWheel, 2),
 					new Object[] { ZaneBlocks.cheeseBlock });
 		}
 	}

@@ -372,28 +372,28 @@ public class ZaneItems {
 	// Zogite Armor
 	public static final Item zogiteBoots = new ZaneArmor(
 			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.FEET,
-			"zogiteboots");
+			"zogiteboots", 3);
 	public static final Item zogiteLegs = new ZaneArmor(
 			ZaneArmorMaterial.ZOGITE, 2, EntityEquipmentSlot.LEGS,
-			"zogiteleggings");
+			"zogiteleggings", 3);
 	public static final Item zogiteChest = new ZaneArmor(
 			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.CHEST,
-			"zogitechestplate");
+			"zogitechestplate", 3);
 	public static final Item zogiteHelm = new ZaneArmor(
 			ZaneArmorMaterial.ZOGITE, 1, EntityEquipmentSlot.HEAD,
-			"zogitehelmet");
+			"zogitehelmet", 3);
 	
-	// Radite
+	// Radite Armor
 	public static final Item raditeBoots = new ZaneArmor(
 			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.FEET,
-			"raditeboots");
+			"raditeboots", 3);
 	public static final Item raditeLegs = new ZaneArmor(
 			ZaneArmorMaterial.RADITE, 2, EntityEquipmentSlot.LEGS,
-			"raditeleggings");
+			"raditeleggings", 3);
 	public static final Item raditeChest = new ZaneArmor(
 			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.CHEST,
-			"raditechestplate");
+			"raditechestplate", 3);
 	public static final Item raditeHelm = new ZaneArmor(
 			ZaneArmorMaterial.RADITE, 1, EntityEquipmentSlot.HEAD,
-			"raditehelmet");
+			"raditehelmet", 3);
 }

@@ -59,7 +59,7 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 		
 		int y = world.getHeight(x, z);
 		
-		if (y <= 120 && random.nextInt(100) <= 10) {
+		if (random.nextInt(10000) <= 10) {
 			
 			WorldGenerator worldGenMet = new WorldGenMeteorite();
 			int randInt = random.nextInt(10);
@@ -77,19 +77,6 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 		// Zanium
 		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10, 16,
 				2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40, 128);
-		
-		// // RedGlowStone
-		// addNetherOreSpawn(ZaneBlocks.redGlowBlock, world, random, x, z, 10,
-		// 16,
-		// 10 + random.nextInt(11), 10, 40, 128);
-		
-		/*
-		 * int y = world.getHeight(x, z);
-		 * 
-		 * if (random.nextInt(500) <= 5) { if (y <= 36) { (new
-		 * WorldGenShinestone()).generate(world, random, new BlockPos(x, y, z));
-		 * } }
-		 */
 		
 		if (random.nextInt(10) <= 5) {
 			int y = world.getHeight(x, z);
