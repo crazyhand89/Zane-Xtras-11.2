@@ -27,8 +27,27 @@ public class WorldGenMeteorite extends ZaneWorldGenMaster {
 		return this;
 	}
 	
+	protected boolean isValidSpawn(World world, BlockPos pos) {
+		int i = pos.getX();
+		int j = pos.getY();
+		int k = pos.getZ();
+		
+		Block blockBelow = world.getBlockState(new BlockPos(i, j - 1, k))
+				.getBlock();
+		
+		if (blockBelow == Blocks.AIR) {
+			return false;
+		}
+		
+		return true;
+	}
+	
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos) {
+		
+		int i = pos.getX();
+		int j = pos.getY();
+		int k = pos.getZ();
 		
 		System.out.println(this.getSpawnedAtString(pos));// you're welcome :D -
 															// Zollern
@@ -45,6 +64,11 @@ public class WorldGenMeteorite extends ZaneWorldGenMaster {
 		// that would be
 		// all of our wrappers, methods, fields, etc. so that it's a little
 		// easier.
+		
+		if (!this.isValidSpawn(world, new BlockPos(i, j, k))) {
+			return false;
+		}
+		
 		this.setBlock(world, pos.add(1, 5, 3), Blocks.OBSIDIAN);
 		this.setBlock(world, pos.add(1, 5, 4), Blocks.OBSIDIAN);
 		this.setBlock(world, pos.add(1, 5, 5), Blocks.OBSIDIAN);
@@ -259,6 +283,8 @@ public class WorldGenMeteorite extends ZaneWorldGenMaster {
 		this.setBlock(world, pos.add(6, 8, 5), Blocks.OBSIDIAN);
 		this.setBlock(world, pos.add(6, 8, 6), Blocks.OBSIDIAN);
 		this.setBlock(world, pos.add(6, 8, 7), Blocks.OBSIDIAN);
+		this.setBlock(world, pos.add(6, 8, 8), Blocks.OBSIDIAN);
+		
 		this.setBlock(world, pos.add(6, 8, 8), Blocks.OBSIDIAN);
 		
 		// Got it to work, sort of, I think.

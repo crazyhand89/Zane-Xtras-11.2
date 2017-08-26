@@ -2,8 +2,12 @@ package zanextras.worldgen;
 
 import java.util.Random;
 import net.minecraft.block.Block;
+import net.minecraft.init.Biomes;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -14,10 +18,13 @@ import zanextras.config.ZaneConfig;
 import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
+import zanextras.worldgen.structures.WorldGenCrops;
 import zanextras.worldgen.structures.WorldGenMeteorite;
 import zanextras.worldgen.structures.WorldGenRedGlowStone;
 
 public class ZaneWorldGenManager implements IWorldGenerator {
+	
+	public static Biome currentBiome;
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
@@ -39,6 +46,14 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 	// y = height
 	// z = depth
 	private void generateSurface(World world, Random random, int x, int z) {
+		
+		int y = world.getHeight(x, z);
+		BlockPos chunkPos = new BlockPos(x, y, z);
+		Chunk currentChunk = world.getChunkFromBlockCoords(chunkPos);
+		// currentBiome = currentChunk.getBiome(chunkPos,
+		// world.getBiomeProvider());
+		currentBiome = world.getBiome(new BlockPos(x, y, z));
+		
 		// Underground Ores
 		addOreSpawn(ZaneBlocks.butterOre, world, random, x, z, 16, 16,
 				4 + random.nextInt(4), ZaneConfig.oreButterSpawnRate, 4, 32);
@@ -57,9 +72,7 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 		addAirSpawnOre(ZaneBlocks.skyiumOre, world, random, x, z, 16, 16,
 				1 + random.nextInt(3), ZaneConfig.oreSkyiumSpawnRate, 200, 205);
 		
-		int y = world.getHeight(x, z);
-		
-		if (random.nextInt(10000) <= 10) {
+		if (random.nextInt(100000) <= ZaneConfig.meteroiteChance) {
 			
 			WorldGenerator worldGenMet = new WorldGenMeteorite();
 			int randInt = random.nextInt(10);
@@ -68,18 +81,99 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 			((WorldGenMeteorite) worldGenMet).setMinableBlock(minableBlock);
 			worldGenMet.generate(world, random, new BlockPos(x, y, z));
 		}
+		
+		// Crops
+		if (random.nextInt(100) <= ZaneConfig.cropSpawnRate) {
+			if (currentBiome.equals(Biomes.PLAINS)
+					|| currentBiome.equals(Biomes.FOREST)
+					|| currentBiome.equals(Biomes.SAVANNA)) {
+				
+				int r = random.nextInt(7);
+				
+				switch (r) {
+				case 0:
+					// Sweet Potatoes
+					WorldGenCrops sweetCrops = new WorldGenCrops(
+							ZaneBlocks.sweetCrops, Blocks.FARMLAND, true);
+					sweetCrops.generate(world, random, chunkPos);
+					break;
+				case 1:
+					// Peppers
+					WorldGenCrops pepperCrops = new WorldGenCrops(
+							ZaneBlocks.pepperCrops, Blocks.FARMLAND, true);
+					pepperCrops.generate(world, random, chunkPos);
+					break;
+				case 2:
+					// Onion
+					WorldGenCrops onionCrops = new WorldGenCrops(
+							ZaneBlocks.onionCrops, Blocks.FARMLAND, true);
+					onionCrops.generate(world, random, chunkPos);
+					break;
+				case 3:
+					// Lettuce
+					WorldGenCrops lettuceCrops = new WorldGenCrops(
+							ZaneBlocks.lettuceCrops, Blocks.FARMLAND, true);
+					lettuceCrops.generate(world, random, chunkPos);
+					break;
+				case 4:
+					// Spinach
+					WorldGenCrops spinachCrops = new WorldGenCrops(
+							ZaneBlocks.spinachCrops, Blocks.FARMLAND, true);
+					spinachCrops.generate(world, random, chunkPos);
+					break;
+				case 5:
+					// Tomatoes
+					WorldGenCrops tomatoCrops = new WorldGenCrops(
+							ZaneBlocks.tomatoCrops, Blocks.FARMLAND, true);
+					tomatoCrops.generate(world, random, chunkPos);
+					break;
+				case 6:
+					// Green Beans
+					WorldGenCrops beanCrops = new WorldGenCrops(
+							ZaneBlocks.greenBeanCrops, Blocks.FARMLAND, true);
+					beanCrops.generate(world, random, chunkPos);
+					break;
+				default: // Sweet Potatoes
+					WorldGenCrops sweetCrops2 = new WorldGenCrops(
+							ZaneBlocks.sweetCrops, Blocks.FARMLAND, true);
+					sweetCrops2.generate(world, random, chunkPos);
+					break;
+				}
+				
+			}
+		}
+		
+		// if (random.nextInt(100) <= 1 && y >= 175) {
+		//
+		// if (y >= 200) {
+		// y = 175;
+		// }
+		// WorldGenerator worldGenCas = new WorldGenCastle();
+		//
+		// worldGenCas.generate(world, random, new BlockPos(x, y, z));
+		// }
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {
 		int Xcoord = x + random.nextInt(16);
 		int Zcoord = z + random.nextInt(16);
 		
+		int y = world.getHeight(x, z);
+		BlockPos chunkPos = new BlockPos(x, y, z);
+		Chunk currentChunk = world.getChunkFromBlockCoords(chunkPos);
+		
 		// Zanium
 		addNetherOreSpawn(ZaneBlocks.zaniumOre, world, random, x, z, 10, 16,
 				2 + random.nextInt(2), ZaneConfig.oreZaniumSpawnRate, 40, 128);
 		
-		if (random.nextInt(10) <= 5) {
-			int y = world.getHeight(x, z);
+		// Crops
+		if (random.nextInt(100) <= ZaneConfig.cropSpawnRateNether) {
+			WorldGenCrops ghostCrops = new WorldGenCrops(ZaneBlocks.ghostCrops,
+					Blocks.SOUL_SAND, false);
+			ghostCrops.generate(world, random, chunkPos);
+		}
+		
+		if (random.nextInt(10) <= 8) {
 			
 			if (y >= 60) {
 				(new WorldGenRedGlowStone()).generate(world, random,

@@ -13,11 +13,13 @@ import zanextras.biomes.ZaneBiomeList;
 import zanextras.config.ZaneConfig;
 import zanextras.creativetabs.ModTabs;
 import zanextras.events.ZaneEvents;
+import zanextras.events.ZaneSoundEvents;
 import zanextras.events.achievements.AchievementsCraftedEvents;
 import zanextras.events.achievements.AchievementsPickUpEvents;
 import zanextras.events.achievements.AchievementsSmeltingEvents;
 import zanextras.handlers.helpers.ModDetector;
 import zanextras.lib.ModInfo;
+import zanextras.mobs.ZaneMobRegistry;
 import zanextras.proxies.IProxy;
 import zanextras.recipes.Recipes;
 import zanextras.util.RegistryUtil;
@@ -30,6 +32,13 @@ public class ZaneXtrasMod {
 			serverSide = ModInfo.SERVER_PROXY)
 	public static IProxy proxy;
 	
+	@Mod.Instance(ModInfo.MODID)
+	private static ZaneXtrasMod INSTANCE;
+	
+	public static ZaneXtrasMod instance() {
+		return INSTANCE;
+	}
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
@@ -37,6 +46,8 @@ public class ZaneXtrasMod {
 		ZaneConfig.init(event);
 		GameRegistry.registerWorldGenerator(new ZaneWorldGenManager(), 40);
 		RegistryUtil.registerAll(event);
+		ZaneSoundEvents.init();
+		ZaneMobRegistry.init();
 		ZaneAchievements.init();
 		ModTabs.init();
 		ZaneBiomeList.init();
@@ -55,5 +66,6 @@ public class ZaneXtrasMod {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
+		
 	}
 }

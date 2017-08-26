@@ -8,6 +8,8 @@ import zanextras.blocks.ZaneBlocks;
 import zanextras.items.armor.ZaneArmor;
 import zanextras.items.armor.ZaneArmorMaterial;
 import zanextras.items.armor.ZaneArmorRarity;
+import zanextras.items.bows.GoldenArrow;
+import zanextras.items.bows.SkeletonBow;
 import zanextras.items.food.ZaneFrenchSalad;
 import zanextras.items.food.ZaneGhostPepper;
 import zanextras.items.food.ZaneItalianSalad;
@@ -66,12 +68,12 @@ public class ZaneItems {
 			EnumRarity.UNCOMMON);
 	public static final Item enderArrow = new ZaneItemRarity("enderarrow",
 			EnumRarity.UNCOMMON);
-	public static final Item goldenArrow = new ZaneItemRarity("goldenarrow",
-			EnumRarity.UNCOMMON);
+	public static final Item goldenArrow = new GoldenArrow();
 	public static final Item lightArrow = new ZaneItemRarity("lightarrow",
 			EnumRarity.UNCOMMON);
 	public static final Item zograditeScythe = new ItemToolZograditeScythe(
 			ZaneToolMaterials.ZOGRADITE);
+	public static final Item skeleBow = new SkeletonBow();
 	
 	// Misc
 	public static final Item chefKnife = new ZaneItemKnife("chefknife");

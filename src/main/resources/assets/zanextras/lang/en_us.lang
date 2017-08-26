@@ -230,14 +230,14 @@ item.zanextras_empowered_staria.name=Empowered Staria
 item.zanextras_empowered_zanium.name=Empowered Zanium
 item.zanextras_emeralddust.name=Emerald Dust
 
-entity.zanextras_hellsheep.name=Hell Sheep
-entity.zanextras_skeletonking.name=Skeleton King
-entity.zanextras_lightskeleton.name=Light Skeleton
-entity.zanextras_lightzombie.name=Light Zombie
-entity.zanextras_angelwarrior.name=Angel Warrior
-entity.zanextras_angelarcher.name=Angel Archer
-entity.zanextras_lightangel.name=Angel
-entity.zanextras_uriel.name=Arch Angel Uriel
+entity.zanextras:hellsheep.name=Hell Sheep
+entity.zanextras:skeletonking.name=Skeleton King
+entity.zanextras:lightskeleton.name=Light Skeleton
+entity.zanextras:lightzombie.name=Light Zombie
+entity.zanextras:angelwarrior.name=Angel Warrior
+entity.zanextras:angelarcher.name=Angel Archer
+entity.zanextras:lightangel.name=Angel
+entity.zanextras:uriel.name=Arch Angel Uriel
 
 zanextras_barrier=Purify Barrier
 

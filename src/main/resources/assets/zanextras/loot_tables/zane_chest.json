@@ -1,0 +1,25 @@
+{
+    "pools": [
+        {
+			"name": "zanextras:zane_chest",
+            "rolls": 8,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "zanextras:zanextras_frenchsalad",
+                    "weight": 80
+                },
+				                {
+                    "type": "item",
+                    "name": "zanextras:zanextras_italiansalad",
+                    "weight": 80
+                },
+				{
+                    "type": "item",
+                    "name": "zanextras:zanextras_ranchsalad",
+					"weight": 50
+                }
+            ]
+        }
+    ]
+}

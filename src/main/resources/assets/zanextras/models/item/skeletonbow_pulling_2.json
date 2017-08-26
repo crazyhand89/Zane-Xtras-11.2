@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "zanextras:items/skeletonbow_pulling_2"
+    }
+}

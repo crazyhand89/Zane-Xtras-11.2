@@ -29,8 +29,7 @@ public class ZaneConfig {
 	public static int skyCastleSpawnRate3;
 	public static int lightBiomeID;
 	public static int dimensionLightID;
-	public static int meteroiteChance1;
-	public static int meteroiteChance2;
+	public static int meteroiteChance;
 	public static int oreZogiteSpawnRate;
 	public static int oreRaditeSpawnRate;
 	public static int oreLightDiamond;
@@ -92,9 +91,9 @@ public class ZaneConfig {
 		config.addCustomCategoryComment(CATEGORY_CROPS,
 				"Change the spawn Rate of Crops here. Chance is determined out of 200"
 						+ System.lineSeparator()
-						+ "Regular Crops Default Value: 20"
+						+ "Regular Crops Default Value: 5"
 						+ System.lineSeparator()
-						+ "Nether Crop Defualt Value: 19");
+						+ "Nether Crop Defualt Value: 5");
 		config.addCustomCategoryComment(CATEGORY_LIQUIDS,
 				"Change the spawn Rate of Liquids here. Must be less than 125 or it WILL break!"
 						+ System.lineSeparator() + "Chlorine Defualt Value: 10"
@@ -108,9 +107,7 @@ public class ZaneConfig {
 						+ System.lineSeparator()
 						+ "Spawn Rate 3 Default Value: 100"
 						+ System.lineSeparator()
-						+ "Meteroite Spawn Rate 1 Default Value: 5"
-						+ System.lineSeparator()
-						+ "Meteroite Spawn Rate 2 Default Value: 1000"
+						+ "Meteroite Spawn Rate Default Value: 5"
 						+ System.lineSeparator()
 						+ "Angel Fortress Spawn Rate 1 Default Value: 2"
 						+ System.lineSeparator()
@@ -167,7 +164,7 @@ public class ZaneConfig {
 		redGlow = config.get(CATEGORY_ORES, "redGlow", 33).getInt();
 		
 		/*
-		 * if (ModHelper.useThermalFoundation) { oreLightNickel =
+		 * if (ModHelper.useThermalFoundation) { oreLightNickel
 		 * config.get(CATEGORY_ORES, "oreLightNickel", 4) .getInt();
 		 * oreLightCopper = config.get(CATEGORY_ORES, "oreLightCopper", 10)
 		 * .getInt(); oreLightTin = config.get(CATEGORY_ORES, "oreLightTin",
@@ -179,10 +176,9 @@ public class ZaneConfig {
 		 */
 		
 		// Crop Spawn Rates
-		cropSpawnRate = config.get(CATEGORY_CROPS, "cropSpawnRate", 20)
-				.getInt();
+		cropSpawnRate = config.get(CATEGORY_CROPS, "cropSpawnRate", 5).getInt();
 		cropSpawnRateNether = config
-				.get(CATEGORY_CROPS, "cropSpawnRateNether", 19).getInt();
+				.get(CATEGORY_CROPS, "cropSpawnRateNether", 5).getInt();
 		
 		// Liquid Spawn Rate
 		liquidAcidSpawnRate = config
@@ -197,10 +193,8 @@ public class ZaneConfig {
 				.get(CATEGORY_STRUCTURES, "skyCasteSpawnRate2", 1).getInt();
 		skyCastleSpawnRate3 = config
 				.get(CATEGORY_STRUCTURES, "skyCasteSpawnRate3", 100).getInt();
-		meteroiteChance1 = config
-				.get(CATEGORY_STRUCTURES, "meteroiteChance1", 5).getInt();
-		meteroiteChance2 = config
-				.get(CATEGORY_STRUCTURES, "meteroiteChance2", 1000).getInt();
+		meteroiteChance = config.get(CATEGORY_STRUCTURES, "meteroiteChance", 5)
+				.getInt();
 		angelFortress1 = config.get(CATEGORY_STRUCTURES, "angelFortress1", 2)
 				.getInt();
 		angelFortress2 = config.get(CATEGORY_STRUCTURES, "angelFortress2", 3000)

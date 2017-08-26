@@ -38,15 +38,14 @@ public class RegistryUtil {
 				ZaneItems.frenchSalad, ZaneItems.italianBottle,
 				ZaneItems.italianSalad, ZaneItems.greenBean,
 				ZaneItems.greenBeanSeeds, ZaneItems.greenPepper,
-				ZaneItems.ketchup,
-				ZaneItems.lettuce, /* ZaneItems.lettuceSeeds, */
+				ZaneItems.ketchup, ZaneItems.lettuce, ZaneItems.lettuceSeeds,
 				ZaneItems.mixtureBottle, ZaneItems.onion, ZaneItems.onionSeeds,
 				ZaneItems.peppercorn, ZaneItems.pepperSeeds, ZaneItems.rawFry,
 				ZaneItems.ranchBottle, ZaneItems.ranchSalad, ZaneItems.salt,
 				ZaneItems.rawSweetPotatoFry, ZaneItems.salad, ZaneItems.spinach,
 				ZaneItems.spinachSeeds, ZaneItems.vinegar, ZaneItems.tomato,
 				ZaneItems.tomatoPaste, ZaneItems.tomatoSeeds,
-				ZaneItems.sweetPotato, ZaneItems.lettuceSeeds);
+				ZaneItems.sweetPotato);
 		
 		// Tools
 		registerItems(event, ZaneItems.chefKnife, ZaneItems.butterAxe,
@@ -63,7 +62,8 @@ public class RegistryUtil {
 				ZaneItems.zaniumSpade, ZaneItems.zaniumSword,
 				ZaneItems.skyiumAxe, ZaneItems.skyiumHoe, ZaneItems.skyiumPick,
 				ZaneItems.skyiumSpade, ZaneItems.skyiumSword,
-				ZaneItems.angelSword, ZaneItems.zograditeScythe);
+				ZaneItems.angelSword, ZaneItems.zograditeScythe,
+				ZaneItems.skeleBow);
 		
 		// Armor
 		registerItems(event, ZaneItems.butterBoots, ZaneItems.butterChest,
