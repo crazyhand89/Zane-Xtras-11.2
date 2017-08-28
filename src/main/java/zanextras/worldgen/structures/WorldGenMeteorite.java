@@ -49,8 +49,9 @@ public class WorldGenMeteorite extends ZaneWorldGenMaster {
 		int j = pos.getY();
 		int k = pos.getZ();
 		
-		System.out.println(this.getSpawnedAtString(pos));// you're welcome :D -
-															// Zollern
+		// System.out.println(this.getSpawnedAtString(pos));// you're welcome :D
+		// -
+		// Zollern
 		
 		// Got it to work. Check out what I did:
 		//

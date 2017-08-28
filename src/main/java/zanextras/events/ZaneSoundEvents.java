@@ -14,7 +14,6 @@ public class ZaneSoundEvents {
 	public static void init() {
 		// Hellp Sheep
 		registerSound(ENTITY_HELL_SHEEP_SAY);
-		
 	}
 	
 	private static SoundEvent registerSound(SoundEvent sound) {

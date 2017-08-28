@@ -8,6 +8,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import zanextras.ZaneXtrasMod;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.items.ZaneItems;
 
@@ -124,6 +125,8 @@ public class RegistryUtil {
 				ZaneBlocks.foolStariaBlock, ZaneBlocks.zogiteBlock,
 				ZaneBlocks.zograditeBlock);
 		
+		ZaneXtrasMod.proxy.addIModelRegister(ZaneBlocks.raditeFluidBlock);
+		
 		// Food Blocks
 		registerBlocks(event, ZaneBlocks.cheeseBlock, ZaneBlocks.cheeseWheel);
 		
@@ -149,9 +152,9 @@ public class RegistryUtil {
 			Block... blocks) {
 		for (Block block : blocks) {
 			final ItemBlock itemBlock = new ItemBlock(block);
+			GameRegistry.register(block);
+			GameRegistry.register(itemBlock, block.getRegistryName());
 			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(block);
-				GameRegistry.register(itemBlock, block.getRegistryName());
 				ModelLoader.setCustomModelResourceLocation(
 						Item.getItemFromBlock(block), 0,
 						new ModelResourceLocation(block.getRegistryName(),
@@ -163,8 +166,9 @@ public class RegistryUtil {
 	public static void registerItems(FMLPreInitializationEvent event,
 			Item... items) {
 		for (Item item : items) {
+			
+			GameRegistry.register(item);
 			if (event.getSide() == Side.CLIENT) {
-				GameRegistry.register(item);
 				ModelLoader.setCustomModelResourceLocation(item, 0,
 						new ModelResourceLocation(item.getRegistryName(),
 								"normal"));

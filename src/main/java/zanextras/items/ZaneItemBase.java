@@ -22,8 +22,8 @@ public class ZaneItemBase extends Item {
 		return this;
 	}
 	
-	@Override
 	@SideOnly(Side.CLIENT)
+	@Override
 	public CreativeTabs getCreativeTab() {
 		return ModTabs.zTabMat;
 	}
