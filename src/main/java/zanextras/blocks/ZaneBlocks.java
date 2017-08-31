@@ -4,20 +4,11 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import zanextras.blocks.fluid.RaditeFluid;
-import zanextras.blocks.fluid.RaditeLiquidBlock;
 import zanextras.items.ZaneItems;
 
 public class ZaneBlocks {
 	
 	Random rand = new Random();
-	
-	// Fluids
-	public static RaditeFluid radite = new RaditeFluid("radite");
-	
-	// Liquid Block
-	public static final RaditeLiquidBlock raditeFluidBlock = new RaditeLiquidBlock(
-			radite);
 	
 	// crops
 	public static final Block garlicCrop = new ZaneBlockCrops("garliccrop", 1,

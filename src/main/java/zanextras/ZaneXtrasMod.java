@@ -1,7 +1,6 @@
 package zanextras;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.achievements.ZaneAchievements;
 import zanextras.biomes.ZaneBiomeList;
-import zanextras.blocks.fluid.RaditeFluid;
+import zanextras.blocks.ZaneFluids;
 import zanextras.config.ZaneConfig;
 import zanextras.creativetabs.ModTabs;
 import zanextras.events.ZaneEvents;
@@ -30,8 +29,6 @@ import zanextras.worldgen.ZaneWorldGenManager;
 @Mod(modid = ModInfo.MODID, name = ModInfo.NAME, version = ModInfo.VERSION)
 public class ZaneXtrasMod {
 	
-	RaditeFluid radite = new RaditeFluid("radite");
-	
 	@SidedProxy(clientSide = ModInfo.CLIENT_PROXY,
 			serverSide = ModInfo.SERVER_PROXY)
 	public static IProxy proxy;
@@ -45,11 +42,10 @@ public class ZaneXtrasMod {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		proxy.preInit(event);
 		ModDetector.detectMods();
 		ZaneConfig.init(event);
 		GameRegistry.registerWorldGenerator(new ZaneWorldGenManager(), 40);
-		FluidRegistry.registerFluid(radite);
+		ZaneFluids.init();
 		RegistryUtil.registerAll(event);
 		ZaneSoundEvents.init();
 		ZaneMobRegistry.init();
@@ -60,6 +56,7 @@ public class ZaneXtrasMod {
 		MinecraftForge.EVENT_BUS.register(new AchievementsCraftedEvents());
 		MinecraftForge.EVENT_BUS.register(new AchievementsSmeltingEvents());
 		MinecraftForge.EVENT_BUS.register(new ZaneEvents());
+		proxy.preInit(event);
 	}
 	
 	@EventHandler

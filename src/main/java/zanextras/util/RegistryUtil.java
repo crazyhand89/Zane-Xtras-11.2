@@ -8,7 +8,6 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
-import zanextras.ZaneXtrasMod;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.items.ZaneItems;
 
@@ -124,8 +123,6 @@ public class RegistryUtil {
 				ZaneBlocks.skyiumBlock, ZaneBlocks.stariaBlock,
 				ZaneBlocks.foolStariaBlock, ZaneBlocks.zogiteBlock,
 				ZaneBlocks.zograditeBlock);
-		
-		ZaneXtrasMod.proxy.addIModelRegister(ZaneBlocks.raditeFluidBlock);
 		
 		// Food Blocks
 		registerBlocks(event, ZaneBlocks.cheeseBlock, ZaneBlocks.cheeseWheel);
