@@ -41,10 +41,12 @@ public class WorldGenCastle extends ZaneWorldGenMaster {
 		// 2
 		// us
 		
-		for (int x = 0; x < 16; x++)
-			for (int y = 0; y < 21; y++)
-				for (int z = 0; z < 16; z++)
-					this.setBlock(world, pos.add(0, 0, 0), Blocks.AIR);
+		System.out.println(this.getSpawnedAtString(pos));
+		
+		// for (int x = 0; x < 16; x++)
+		// for (int y = 0; y < 21; y++)
+		// for (int z = 0; z < 16; z++)
+		// this.setBlock(world, pos.add(0, 0, 0), Blocks.AIR);
 		
 		this.setBlock(world, pos.add(0, 0, 0), Blocks.STONEBRICK);
 		this.setBlock(world, pos.add(0, 0, 1), Blocks.STONEBRICK);
@@ -2715,12 +2717,6 @@ public class WorldGenCastle extends ZaneWorldGenMaster {
 		this.setBlock(world, pos.add(14, 9, 3), Blocks.BOOKSHELF);
 		this.setBlock(world, pos.add(14, 9, 4), Blocks.BOOKSHELF);
 		this.setBlock(world, pos.add(14, 9, 5), Blocks.BOOKSHELF);
-		// this.setBlock(world, pos.add(14, 9, 6), Blocks.chest);
-		// int chest3X = i + 14;
-		// int chest3Y = j + 9;
-		// int chest3Z = k + 6;
-		// Treasures.spawnChest(world, rand, chest3X, chest3Y, chest3Z, false,
-		// ZaneChestGenHooks.ZANE_TOWER_MAGIC);
 		
 		this.setBlock(world, pos.add(14, 9, 6), chestState);
 		

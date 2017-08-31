@@ -1,6 +1,7 @@
 package zanextras;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -38,6 +39,10 @@ public class ZaneXtrasMod {
 	
 	public static ZaneXtrasMod instance() {
 		return INSTANCE;
+	}
+	
+	public ZaneXtrasMod() {
+		FluidRegistry.enableUniversalBucket();
 	}
 	
 	@EventHandler

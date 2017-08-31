@@ -3,12 +3,19 @@ package zanextras.recipes;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.blocks.ZaneBlocks;
+import zanextras.blocks.ZaneFluids;
 import zanextras.handlers.helpers.ModDetector;
 import zanextras.items.ZaneItems;
 
 public class ItemRecipes {
+	
+	protected static ItemStack acidBucket = UniversalBucket.getFilledBucket(
+			ForgeModContainer.getInstance().universalBucket,
+			ZaneFluids.fluidAcid);
 	
 	public static void init() {
 		/* BottleRecipes.init(); */
@@ -59,6 +66,12 @@ public class ItemRecipes {
 			GameRegistry.addRecipe(new ItemStack(ZaneItems.lightStick, 4),
 					new Object[] { "   ", "  P", "  P", 'P',
 							ZaneBlocks.lightPlanks });
+			
+			// Acid Bottle
+			GameRegistry.addShapelessRecipe(
+					new ItemStack(ZaneItems.acidBottle, 3),
+					new Object[] { acidBucket, Items.GLASS_BOTTLE,
+							Items.GLASS_BOTTLE, Items.GLASS_BOTTLE });
 			
 		}
 	}

@@ -18,6 +18,7 @@ import zanextras.config.ZaneConfig;
 import zanextras.worldgen.minable.WorldGenAirMinable;
 import zanextras.worldgen.minable.WorldGenEnderMinable;
 import zanextras.worldgen.minable.WorldGenNetherMinable;
+import zanextras.worldgen.structures.WorldGenCastle;
 import zanextras.worldgen.structures.WorldGenCrops;
 import zanextras.worldgen.structures.WorldGenMeteorite;
 import zanextras.worldgen.structures.WorldGenRedGlowStone;
@@ -143,15 +144,13 @@ public class ZaneWorldGenManager implements IWorldGenerator {
 			}
 		}
 		
-		// if (random.nextInt(100) <= 1 && y >= 175) {
-		//
-		// if (y >= 200) {
-		// y = 175;
-		// }
-		// WorldGenerator worldGenCas = new WorldGenCastle();
-		//
-		// worldGenCas.generate(world, random, new BlockPos(x, y, z));
-		// }
+		if (random.nextInt(100) <= 1) {
+			
+			y = 175;
+			WorldGenerator worldGenCas = new WorldGenCastle();
+			
+			worldGenCas.generate(world, random, new BlockPos(x, y, z));
+		}
 	}
 	
 	private void generateNether(World world, Random random, int x, int z) {

@@ -2,6 +2,9 @@ package zanextras.recipes;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ForgeModContainer;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import zanextras.blocks.ZaneBlocks;
 import zanextras.items.ZaneItems;
@@ -135,5 +138,12 @@ public class FoodRecipes {
 					new ItemStack(ZaneBlocks.cheeseWheel, 2),
 					new Object[] { ZaneBlocks.cheeseBlock });
 		}
+	}
+	
+	public static ItemStack getFluidBucket(FluidStack fluidStack) {
+		
+		return UniversalBucket.getFilledBucket(
+				ForgeModContainer.getInstance().universalBucket,
+				fluidStack.getFluid());
 	}
 }

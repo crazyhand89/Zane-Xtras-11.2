@@ -2,22 +2,46 @@
     "pools": [
         {
 			"name": "zanextras:magic_chest",
-            "rolls": 8,
+            "rolls":
+			{
+                "min": 4,
+                "max": 8
+            },
             "entries": [
                 {
                     "type": "item",
                     "name": "zanextras:zanextras_frenchsalad",
-                    "weight": 80
+                    "weight": 5
                 },
 				                {
                     "type": "item",
                     "name": "zanextras:zanextras_italiansalad",
-                    "weight": 80
+                    "weight": 5
                 },
 				{
                     "type": "item",
                     "name": "zanextras:zanextras_ranchsalad",
-					"weight": 50
+					"weight": 5
+                },
+				                {
+                    "type": "item",
+                    "name": "zanextras:zanextras_frenchbottle",
+                    "weight": 5
+                },
+				                {
+                    "type": "item",
+                    "name": "zanextras:zanextras_italianbottle",
+                    "weight": 5
+                },
+				{
+                    "type": "item",
+                    "name": "zanextras:zanextras_ranchbottle",
+					"weight": 5
+                },
+				{
+                    "type": "item",
+                    "name": "zanextras:zanextras_skyiumdust",
+					"weight": 10
                 },
 				{
                     "type": "item",
@@ -26,12 +50,54 @@
                         {
                             "function": "set_count",
                             "count": {
-                                "min": 4,
-                                "max": 6
+                                "min": 1,
+                                "max": 2
                             }
                         }
                     ],
-					"weight": 40
+					"weight": 15
+                },
+				{
+                    "type": "item",
+                    "name": "zanextras:zanextras_glowstick",
+					 "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ],
+					"weight": 15
+                },
+				{
+                    "type": "item",
+                    "name": "zanextras:zanextras_redglowstonedust",
+					 "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ],
+					"weight": 15
+                },
+								{
+                    "type": "item",
+                    "name": "minecraft:glowstone_dust",
+					 "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ],
+					"weight": 15
                 }
             ]
         }

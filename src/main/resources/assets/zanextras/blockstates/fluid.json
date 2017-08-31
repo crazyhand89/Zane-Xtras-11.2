@@ -11,17 +11,17 @@
 				}
 			}
 		],
-		"glowstone": [
+		"chlorine": [
 			{
 				"custom": {
-					"fluid": "glowstone"
+					"fluid": "chlorine"
 				}
 			}
 		],
-		"ender": [
+		"acid": [
 			{
 				"custom": {
-					"fluid": "ender"
+					"fluid": "acid"
 				}
 			}
 		],
